@@ -1,18 +1,23 @@
 "use client";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { register } from "swiper/element/bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
+import "swiper/css/effect-cards";
+import "swiper/css/thumbs";
+import { EffectCards } from "swiper/modules";
 
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 import image from "../../assets/images/murangu.webp";
 import Image, { StaticImageData } from "next/image";
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 register();
 const images: StaticImageData[] = [
@@ -30,33 +35,22 @@ const images: StaticImageData[] = [
 
 export const Slider = () => {
   const swiperElRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [swiperInstance, setSwiperInstance] = useState(null);
 
-  const [preloadedImages, setPreloadedImages] = useState<StaticImageData[]>([]);
-
-  useEffect(() => {
-    const preloadImages = () => {
-      const promises = images.map((src) => {
-        return new Promise<void>((resolve, reject) => {
-          const img = document.createElement("img");
-          img.src = src.src;
-          img.onload = () => resolve();
-          img.onerror = () =>
-            reject(new Error(`Failed to load image ${src.src}`));
-        });
-      });
-
-      Promise.all(promises)
-        .then(() => setPreloadedImages(images))
-        .catch((err) => console.error("Failed to preload images", err));
-    };
-
-    preloadImages();
-  }, []);
+  const handleSlideClick = (index: number) => {
+    if (swiperInstance) {
+      const realIndex = swiperInstance.realIndex;
+      swiperInstance.slideToLoop(index);
+      setActiveIndex(realIndex);
+    }
+  };
 
   return (
-    <div className="container  mx-0 px-0">
+    <div className="container mx-0 px-0 ">
       <Swiper
         ref={swiperElRef}
+        onSwiper={setSwiperInstance}
         effect={"coverflow"}
         freeMode={{
           enabled: true,
@@ -65,8 +59,12 @@ export const Slider = () => {
           momentumRatio: 0.5,
           momentumBounce: false,
         }}
+        normalizeSlideIndex={true}
         fadeEffect={{
           crossFade: true,
+        }}
+        keyboard={{
+          enabled: true,
         }}
         coverflowEffect={{
           rotate: 8,
@@ -78,20 +76,19 @@ export const Slider = () => {
         mousewheel={{
           enabled: true,
         }}
-        speed={600}
+        speed={800}
         threshold={9}
         touchMoveStopPropagation={true}
-        autoplay={{ delay: 2000 }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
+        onClick={(swiper) => {
+          console.log("swiper", swiper);
+        }}
+        autoplay={{ delay: 3000 }}
+        modules={[EffectCoverflow, Pagination, Navigation, EffectCards]}
+        cardsEffect={{
+          rotate: true,
+        }}
         pagination={{
           clickable: true,
-          // renderBullet: function (index, className) {
-          //   return `<span class="${className}">${index + 1}</span>`;
-          // },
-
-          // renderProgressbar: function (progressbarFillClass) {
-          //   return '<span class="' + progressbarFillClass + '"></span>';
-          // },
           dynamicBullets: true,
         }}
         navigation={{
@@ -104,33 +101,51 @@ export const Slider = () => {
         resistance={false}
         loop={true}
         className="swiper_container"
+        observer={true}
+        observeParents={true}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
       >
-        {preloadedImages.length > 0
-          ? preloadedImages.map((src, index) => (
-              <SwiperSlide key={index} className="rounded-xl p-4 bg-gray-800">
-                <Image
-                  src={src}
-                  loading="lazy"
-                  alt={`Slide ${index + 1}`}
-                  className="rounded-xl"
-                  width={500}
-                  height={500}
-                />
-                <h1 className=" flex justify-center mt-3 rounded-md text-xl  text-white">
+        {images.length > 0
+          ? images.map((src, index) => (
+              <SwiperSlide
+                onClick={() => handleSlideClick(index)}
+                key={index}
+                className="rounded-xl p-4 bg-gray-800 "
+              >
+                <div className="overflow-hidden rounded-xl hover:shadow-lg">
+                  <Image
+                    src={src}
+                    alt={`Slide ${index + 1}`}
+                    className="transform transition-transform duration-300 ease-in-out scale-105 hover:scale-125 will-change-transform "
+                    width={500}
+                    height={500}
+                  />
+                </div>
+                <h1 className="flex justify-center mt-3 rounded-md text-xl text-white">
                   titulo
                 </h1>
               </SwiperSlide>
             ))
           : null}
 
-        <div className=" flex py-4 justify-between slider-controler">
-          <div className=".swiper-button-prev.slider-arrow">
-            <div>1</div>
+        <div className="flex py-4 justify-between slider-controler">
+          {/* <div className="swiper-button-prev slider-arrow ">
+            <ChevronLeftIcon className="h-6 w-6 text-white" />
           </div>
-          <div className=".swiper-button-next.slider-arrow">
-            <div>2</div>
+          <div className="swiper-button-next slider-arrow">
+            <ChevronRightIcon className="h-6 w-6 text-white" />
           </div>
-          <div className="swiper-pagination " />
+          <div className="swiper-pagination " /> */}
         </div>
       </Swiper>
     </div>
