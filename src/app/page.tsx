@@ -1,3 +1,4 @@
+import { CallToAction } from "@/components/callToAction/CallToAction";
 import { Slider } from "@/components/slider";
 
 import "swiper/css";
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-0 md:p-24">
       <Slider />
+      <CallToAction />
     </main>
   );
 }
