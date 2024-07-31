@@ -2,8 +2,6 @@
 import { useRef, useState } from "react";
 import { register } from "swiper/element/bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FaArrowLeft } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
@@ -12,12 +10,11 @@ import "swiper/css/free-mode";
 import "swiper/css/effect-cards";
 import "swiper/css/thumbs";
 import { EffectCards } from "swiper/modules";
-
+import { Swiper as SwiperType } from "swiper";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 import image from "../../assets/images/murangu.webp";
 import Image, { StaticImageData } from "next/image";
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 register();
 const images: StaticImageData[] = [
@@ -36,7 +33,7 @@ const images: StaticImageData[] = [
 export const Slider = () => {
   const swiperElRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [swiperInstance, setSwiperInstance] = useState(null);
+  const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
   const handleSlideClick = (index: number) => {
     if (swiperInstance) {
