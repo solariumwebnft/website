@@ -10,10 +10,10 @@ import "swiper/css/pagination";
 
 export default function Home() {
   return (
-    <main className="relative flex h-full w-full flex-col items-center justify-between bg-black p-0">
+    <main className="relative m-0 flex h-full w-full flex-col items-center justify-between bg-black p-0">
       <div className="absolute inset-0 h-full w-full">
         <SparklesCore
-          id="tsparticlesfullpage"
+          id="tsparticlesfullpage2"
           background="transparent"
           minSize={0.6}
           maxSize={1.4}
@@ -24,7 +24,6 @@ export default function Home() {
       </div>
       <Navbar />
       <Slider />
-      <CallToAction />
       <CallToAction />
     </main>
   );

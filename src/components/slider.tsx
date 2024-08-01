@@ -15,10 +15,14 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 import image from "../../assets/images/murangu.webp";
 import Image, { StaticImageData } from "next/image";
-import { Button } from "./ui/button";
 
 register();
 const images: StaticImageData[] = [
+  image,
+  image,
+  image,
+  image,
+  image,
   image,
   image,
   image,
@@ -45,7 +49,7 @@ export const Slider = () => {
   };
 
   return (
-    <div className="container mx-0 px-0">
+    <div className="container mx-0 max-w-[100vw] px-0">
       <Swiper
         ref={swiperElRef}
         onSwiper={setSwiperInstance}
@@ -95,7 +99,7 @@ export const Slider = () => {
         }}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={3}
+        slidesPerView={4}
         resistance={false}
         loop={true}
         className="swiper_container"

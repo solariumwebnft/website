@@ -14,15 +14,15 @@ export const Navbar: React.FC = () => {
     { label: "session 3 ", key: "wallet3" },
   ];
 
-  const [isLinksVisible, setIsLinksVisible] = useState<Boolean>(false);
+  const [isLinksVisible, setIsLinksVisible] = useState<boolean>(false);
 
   const toggleLinks = () => {
     setIsLinksVisible(!isLinksVisible);
   };
 
   return (
-    <nav className="top-0 z-20 w-full bg-gray-500">
-      <div className="mx-auto flex max-w-screen-xl items-center justify-between p-4">
+    <nav className="top-0 z-20 w-full bg-gray-500 p-0">
+      <div className="mx-auto flex max-w-[100vw] items-center justify-between p-4 px-8">
         <a
           href="https://flowbite.com/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -43,8 +43,6 @@ export const Navbar: React.FC = () => {
           <Button
             data-collapse-toggle="navbar-default"
             variant={"link"}
-            // aria-controls="navbar-default"
-            // aria-expanded={isLinksVisible}
             onClick={toggleLinks}
           >
             <span className="sr-only">Toggle Links</span>
@@ -75,17 +73,18 @@ export const Navbar: React.FC = () => {
                     alignItems: "center",
                     display: "flex",
                     minHeight: "100%",
+                    position: "relative",
                   }}
                   variant="link"
-                  className="z-10 text-white"
+                  className="hover:underline-effect z-10 text-white"
                 >
-                  {item.label}
+                  <span className="hover-underline">{item.label}</span>
                 </Button>
               </li>
-            ))}{" "}
+            ))}
             {menuItems.map((item) => (
               <li key={item.key}>
-                <Button className="button-glass z-10 max-w-[44px] justify-between p-2 px-4 text-white">
+                <Button className="button-glass z-10 max-w-[44px] justify-between p-2 px-4 text-white transition-colors duration-300">
                   {item.label} {item.icon}
                 </Button>
               </li>
@@ -94,7 +93,13 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      <div className={`${isLinksVisible ? "block" : "hidden"} md:hidden`}>
+      <div
+        className={`${
+          isLinksVisible
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-2 opacity-0"
+        } transition-all duration-300 ease-in-out md:hidden`}
+      >
         <ul className="absolute flex w-[100%] flex-col gap-4 bg-gray-500 p-6">
           {link.map((item) => (
             <li key={item.key}>
@@ -104,10 +109,11 @@ export const Navbar: React.FC = () => {
                   alignItems: "center",
                   display: "flex",
                   minWidth: "100%",
+                  position: "relative",
                 }}
-                className="z-10 p-6 text-white"
+                className="hover:underline-effect z-10 p-6 text-white"
               >
-                {item.label}
+                <span className="hover-underline">{item.label}</span>
               </Button>
             </li>
           ))}
@@ -119,7 +125,7 @@ export const Navbar: React.FC = () => {
                   display: "flex",
                   minWidth: "100%",
                 }}
-                className="button-glass z-10 max-w-[44px] justify-between p-2 px-4 text-white"
+                className="button-glass z-10 max-w-[44px] justify-center gap-2 p-2 px-4 text-white transition-colors duration-300"
               >
                 {item.label} {item.icon}
               </Button>
