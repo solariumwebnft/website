@@ -58,3 +58,46 @@
     --chart-5: 340 75% 55%;
   }
 }
+
+@keyframes lightEffect {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.button-glass {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-glass::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform: translateX(-100%);
+}
+
+.button-glass:hover::before {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2)
+  );
+  z-index: 20;
+  transform: translateX(75%);
+  animation: lightEffect 1s forwards;
+}
