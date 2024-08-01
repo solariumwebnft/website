@@ -12,18 +12,7 @@ import { SwiperSection } from "./SwiperSection";
 import { SparklesCore } from "../ui/sparkles";
 
 export const CallToAction = () => (
-  <div className="relative flex max-h-[268px] w-full max-w-[1110px] flex-col justify-between overflow-hidden rounded-3xl bg-gray-800 md:flex-row lg:pr-[40px]">
-    <div className="absolute inset-0 h-screen w-full">
-      <SparklesCore
-        id="tsparticlesfullpage"
-        background="transparent"
-        minSize={0.6}
-        maxSize={1.4}
-        particleDensity={100}
-        className="h-full w-full"
-        particleColor="#FFFFFF"
-      />
-    </div>
+  <div className="z-20 mt-24 flex max-h-[268px] w-full max-w-[1110px] flex-col justify-between overflow-hidden rounded-3xl bg-gray-800 md:flex-row lg:pr-[40px]">
     <div className="flex flex-col justify-between p-[30px] text-white md:p-[50px]">
       <h2 className="mb-4 text-2xl font-semibold md:max-w-[60%] md:text-3xl lg:max-w-[100%] lg:text-4xl">
         Discover, create and sell your own NFT
