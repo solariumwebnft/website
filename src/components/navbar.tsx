@@ -21,7 +21,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="top-0 z-20 w-full bg-gray-500 p-0">
+    <nav className="top-0 z-10 w-full bg-gray-500 p-0">
       <div className="mx-auto flex max-w-[100vw] items-center justify-between p-4 px-8">
         <a
           href="https://flowbite.com/"
@@ -94,13 +94,9 @@ export const Navbar: React.FC = () => {
       </div>
 
       <div
-        className={`${
-          isLinksVisible
-            ? "translate-y-0 opacity-100"
-            : "-translate-y-2 opacity-0"
-        } transition-all duration-300 ease-in-out md:hidden`}
+        className={` ${isLinksVisible ? "" : "hidden"} transform transition-all duration-300 ease-in-out md:hidden`}
       >
-        <ul className="absolute flex w-[100%] flex-col gap-4 bg-gray-500 p-6">
+        <ul className="absolute flex w-full flex-col gap-4 bg-gray-500 p-6">
           {link.map((item) => (
             <li key={item.key}>
               <Button
@@ -118,7 +114,7 @@ export const Navbar: React.FC = () => {
             </li>
           ))}
           {menuItems.map((item) => (
-            <li key={item.key} className="h-100% flex">
+            <li key={item.key} className="flex h-full">
               <Button
                 style={{
                   alignItems: "center",
