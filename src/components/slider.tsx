@@ -99,7 +99,6 @@ export const Slider = () => {
         }}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={4}
         resistance={false}
         loop={true}
         className="swiper_container"
@@ -109,11 +108,12 @@ export const Slider = () => {
           0: {
             slidesPerView: 1,
           },
+          480: { slidesPerView: 2 },
           640: {
             slidesPerView: 2,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 4,
           },
         }}
       >
@@ -122,15 +122,15 @@ export const Slider = () => {
               <SwiperSlide
                 onClick={() => handleSlideClick(index)}
                 key={index}
-                className="rounded-xl bg-gray-800 p-4"
+                className="rounded-xl bg-gray-800 p-4 md:max-w-[450px]"
               >
                 <div className="overflow-hidden rounded-xl hover:shadow-lg">
                   <Image
                     src={src}
                     alt={`Slide ${index + 1}`}
                     className="z-50 scale-105 transform transition-transform duration-300 ease-in-out will-change-transform hover:scale-125"
-                    width={500}
-                    height={500}
+                    width={450}
+                    height={450}
                   />
                 </div>
                 <h1 className="mt-3 flex justify-center rounded-md text-xl text-white">
