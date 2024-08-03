@@ -1,4 +1,5 @@
 import { CallToAction } from "@/components/callToAction/CallToAction";
+import { GridLayoutMedia } from "@/components/layoutMedia/GridLayoutMedia";
 import { Navbar } from "@/components/navbar";
 import { Slider } from "@/components/slider";
 import { SparklesCore } from "@/components/ui/sparkles";
@@ -22,9 +23,11 @@ export default function Home() {
           particleColor="#FFFFFF"
         />
       </div>
+
       <Navbar />
       <Slider />
       <CallToAction />
+      <GridLayoutMedia />
     </main>
   );
 }
