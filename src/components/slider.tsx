@@ -15,9 +15,15 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 import image from "../../assets/images/murangu.webp";
 import Image, { StaticImageData } from "next/image";
+import { motion } from "framer-motion";
 
 register();
 const images: StaticImageData[] = [
+  image,
+  image,
+  image,
+  image,
+  image,
   image,
   image,
   image,
@@ -44,7 +50,7 @@ export const Slider = () => {
   };
 
   return (
-    <div className="container mx-0 px-0 ">
+    <div className="container mx-0 max-w-[100vw] px-0">
       <Swiper
         ref={swiperElRef}
         onSwiper={setSwiperInstance}
@@ -52,11 +58,7 @@ export const Slider = () => {
         freeMode={{
           enabled: true,
           sticky: true,
-          momentum: true,
-          momentumRatio: 0.5,
-          momentumBounce: false,
         }}
-        normalizeSlideIndex={true}
         fadeEffect={{
           crossFade: true,
         }}
@@ -74,16 +76,16 @@ export const Slider = () => {
           enabled: true,
         }}
         speed={800}
-        threshold={9}
+        threshold={5}
         touchMoveStopPropagation={true}
         onClick={(swiper) => {
           console.log("swiper", swiper);
         }}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 5000 }}
         modules={[EffectCoverflow, Pagination, Navigation, EffectCards]}
-        cardsEffect={{
-          rotate: true,
-        }}
+        // cardsEffect={{
+        //   rotate: true,
+        // }}
         pagination={{
           clickable: true,
           dynamicBullets: true,
@@ -94,7 +96,6 @@ export const Slider = () => {
         }}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={3}
         resistance={false}
         loop={true}
         className="swiper_container"
@@ -104,11 +105,12 @@ export const Slider = () => {
           0: {
             slidesPerView: 1,
           },
+          480: { slidesPerView: 2 },
           640: {
             slidesPerView: 2,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 4,
           },
         }}
       >
@@ -117,25 +119,25 @@ export const Slider = () => {
               <SwiperSlide
                 onClick={() => handleSlideClick(index)}
                 key={index}
-                className="rounded-xl p-4 bg-gray-800 "
+                className="rounded-xl bg-gray-800 p-4 md:max-w-[500px]"
               >
                 <div className="overflow-hidden rounded-xl hover:shadow-lg">
                   <Image
                     src={src}
                     alt={`Slide ${index + 1}`}
-                    className="transform transition-transform duration-300 ease-in-out scale-105 hover:scale-125 will-change-transform "
+                    className="z-50 scale-105 transform transition-transform duration-300 ease-in-out will-change-transform hover:scale-125"
                     width={500}
                     height={500}
                   />
                 </div>
-                <h1 className="flex justify-center mt-3 rounded-md text-xl text-white">
+                <h1 className="mt-3 flex justify-center rounded-md text-xl text-white">
                   titulo
                 </h1>
               </SwiperSlide>
             ))
           : null}
 
-        <div className="flex py-4 justify-between slider-controler">
+        <div className="slider-controler flex justify-between py-4">
           {/* <div className="swiper-button-prev slider-arrow ">
             <ChevronLeftIcon className="h-6 w-6 text-white" />
           </div>
