@@ -7,6 +7,7 @@ import { FaHeart } from "react-icons/fa";
 import { GlareCard } from "../ui/glare-card";
 import { Button } from "../ui/button";
 import { FaCheck } from "react-icons/fa";
+import { Highlight } from "../ui/hero-highlight";
 
 export function NFTComponent() {
   return (
@@ -14,7 +15,7 @@ export function NFTComponent() {
       <section className="flex flex-col justify-center gap-4 md:max-w-[600px]">
         <div className="space-y-4 text-white">
           <h1 className="text-4xl font-bold">
-            The World’s Leading Cryptocurrency Platform
+            <Highlight>The World’s Leading Cryptocurrency Platform</Highlight>
           </h1>
           <h2 className="font-thin">
             Buy and sell NFTs from the world’s top artists. More than 1.000
