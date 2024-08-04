@@ -3,7 +3,6 @@ import { GridLayoutMedia } from "@/components/layoutMedia/GridLayoutMedia";
 import { Navbar } from "@/components/navbar";
 import { NFTComponent } from "@/components/NTF/NFTComponent";
 import { Slider } from "@/components/slider";
-import { Stepbystep } from "@/components/stepbystep";
 import { SparklesCore } from "@/components/ui/sparkles";
 
 import "swiper/css";
@@ -31,7 +30,6 @@ export default function Home() {
       <Slider />
       <CallToAction />
       <GridLayoutMedia />
-      <Stepbystep />
     </main>
   );
 }
