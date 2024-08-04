@@ -1,6 +1,7 @@
 import { CallToAction } from "@/components/callToAction/CallToAction";
 import { GridLayoutMedia } from "@/components/layoutMedia/GridLayoutMedia";
 import { Navbar } from "@/components/navbar";
+import { NFTComponent } from "@/components/NTF/NFTComponent";
 import { Slider } from "@/components/slider";
 import { SparklesCore } from "@/components/ui/sparkles";
 
@@ -25,6 +26,7 @@ export default function Home() {
       </div>
 
       <Navbar />
+      <NFTComponent />
       <Slider />
       <CallToAction />
       <GridLayoutMedia />

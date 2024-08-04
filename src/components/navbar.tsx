@@ -21,7 +21,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="top-0 z-10 w-full bg-gray-500 p-0">
+    <nav className="top-0 z-10 w-full bg-gray-500 p-0 md:bg-transparent">
       <div className="mx-auto flex max-w-[100vw] items-center justify-between p-4 px-8">
         <a
           href="https://flowbite.com/"

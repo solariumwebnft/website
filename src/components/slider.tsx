@@ -15,6 +15,7 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 import image from "../../assets/images/murangu.webp";
 import Image, { StaticImageData } from "next/image";
+import { motion } from "framer-motion";
 
 register();
 const images: StaticImageData[] = [
@@ -57,11 +58,7 @@ export const Slider = () => {
         freeMode={{
           enabled: true,
           sticky: true,
-          momentum: true,
-          momentumRatio: 0.5,
-          momentumBounce: false,
         }}
-        normalizeSlideIndex={true}
         fadeEffect={{
           crossFade: true,
         }}
@@ -79,16 +76,16 @@ export const Slider = () => {
           enabled: true,
         }}
         speed={800}
-        threshold={9}
+        threshold={5}
         touchMoveStopPropagation={true}
         onClick={(swiper) => {
           console.log("swiper", swiper);
         }}
         autoplay={{ delay: 5000 }}
         modules={[EffectCoverflow, Pagination, Navigation, EffectCards]}
-        cardsEffect={{
-          rotate: true,
-        }}
+        // cardsEffect={{
+        //   rotate: true,
+        // }}
         pagination={{
           clickable: true,
           dynamicBullets: true,
@@ -122,15 +119,15 @@ export const Slider = () => {
               <SwiperSlide
                 onClick={() => handleSlideClick(index)}
                 key={index}
-                className="rounded-xl bg-gray-800 p-4 md:max-w-[450px]"
+                className="rounded-xl bg-gray-800 p-4 md:max-w-[500px]"
               >
                 <div className="overflow-hidden rounded-xl hover:shadow-lg">
                   <Image
                     src={src}
                     alt={`Slide ${index + 1}`}
                     className="z-50 scale-105 transform transition-transform duration-300 ease-in-out will-change-transform hover:scale-125"
-                    width={450}
-                    height={450}
+                    width={500}
+                    height={500}
                   />
                 </div>
                 <h1 className="mt-3 flex justify-center rounded-md text-xl text-white">
