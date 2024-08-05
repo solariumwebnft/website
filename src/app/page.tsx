@@ -1,4 +1,5 @@
 import { CallToAction } from "@/components/callToAction/CallToAction";
+import { Footer } from "@/components/footer";
 import { GridLayoutMedia } from "@/components/layoutMedia/GridLayoutMedia";
 import { Navbar } from "@/components/navbar";
 import { NFTComponent } from "@/components/NTF/NFTComponent";
@@ -32,6 +33,7 @@ export default function Home() {
       <CallToAction />
       <GridLayoutMedia />
       <Stepbystep />
+      <Footer />
     </main>
   );
 }
