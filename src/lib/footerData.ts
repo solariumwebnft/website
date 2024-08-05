@@ -34,10 +34,10 @@ export const footerData = [
       "Create Collection",
     ],
   },
-  {
-    title: "Company",
-    links: ["Help center", "Platform status"],
-  },
+  // {
+  //   title: "Company",
+  //   links: ["Help center", "Platform status"],
+  // },
   {
     title: "Join the community",
     links: [],

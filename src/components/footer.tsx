@@ -6,31 +6,26 @@ import { buttonVariants } from "./ui/button";
 
 export const Footer = () => {
   return (
-    <footer className="z-10 w-full bg-black px-10 py-10 text-white">
-      <div className="container mx-auto">
-        <div
-          aria-label="footer logo"
-          className="flex h-max w-max space-x-2 pb-8 md:flex lg:hidden"
-        >
-          <FooterLogo />
-        </div>
-        <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-6">
-          <div
-            aria-label="footer logo"
-            className="hidden h-max w-max space-x-2 md:hidden lg:flex"
-          >
-            <FooterLogo />
-          </div>
+    <footer className="z-10 w-full bg-black py-6 text-white">
+      <div className="flex flex-col justify-center md:flex-row">
+        <FooterLogo />
+        <div className="flex flex-wrap justify-center px-10">
           {footerData.map((section, index) => (
-            <div key={index} className="">
+            <div
+              key={index}
+              className="min-w-[200px] flex-1 justify-center py-4"
+            >
               <h2 className="mb-4 font-semibold">{section.title}</h2>
               {section.links.length > 0 && (
                 <ul className="space-y-2">
                   {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>{link}</li>
+                    <li className="text-gray-400" key={linkIndex}>
+                      {link}
+                    </li>
                   ))}
                 </ul>
               )}
+
               {section.icons && (
                 <div className="mt-4 flex space-x-4">
                   {section.icons.map((iconData, iconIndex) => {
@@ -40,12 +35,6 @@ export const Footer = () => {
                         key={iconIndex}
                         href={iconData.url}
                         aria-label={iconData.label}
-                        // className={cn(
-                        //   "text-gray-400 hover:text-white",
-                        //   buttonVariants({
-                        //     variant: "ghost",
-                        //   }),
-                        // )}
                       >
                         <IconComponent />
                       </Link>
