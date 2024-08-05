@@ -1,5 +1,6 @@
 import { CallToAction } from "@/components/callToAction/CallToAction";
 import { Footer } from "@/components/footer";
+import { Hero } from "@/components/hero";
 import { GridLayoutMedia } from "@/components/layoutMedia/GridLayoutMedia";
 import { Navbar } from "@/components/navbar";
 import { NFTComponent } from "@/components/NTF/NFTComponent";
@@ -28,6 +29,7 @@ export default function Home() {
       </div>
 
       <Navbar />
+      <Hero />
       <NFTComponent />
       <Slider />
       <CallToAction />
