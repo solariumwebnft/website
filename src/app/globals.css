@@ -127,3 +127,80 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+@keyframes neonBorder {
+  0% {
+    box-shadow:
+      0 0 5px #00f6ff,
+      0 0 15px #00f6ff,
+      0 0 20px #00f6ff,
+      0 0 40px #00f6ff;
+    border-color: #00f6ff;
+  }
+  50% {
+    box-shadow:
+      0 0 10px #00f6ff,
+      0 0 15px #00f6ff,
+      0 0 30px #00f6ff,
+      0 0 60px #00f6ff;
+    border-color: #00f6ff;
+  }
+  100% {
+    box-shadow:
+      0 0 5px #00f6ff,
+      0 0 11px #00f6ff,
+      0 0 20px #00f6ff,
+      0 0 50px #00f6ff;
+    border-color: #00f6ff;
+  }
+}
+
+.active-neon-button {
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.active-neon-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  animation: neonBorder 2s infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+.neon-glow {
+  position: relative;
+  background: linear-gradient(to right, #00f6ff, #0066ff);
+  box-shadow:
+    0 0 5px #00f6ff,
+    0 0 15px #00f6ff,
+    0 0 30px #00f6ff,
+    0 0 60px #00f6ff;
+  filter: brightness(1.2);
+  border-radius: 4px;
+  height: 4px;
+}
+
+.neon-glow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  box-shadow:
+    0 0 10px #00f6ff,
+    0 0 20px #00f6ff,
+    0 0 40px #00f6ff,
+    0 0 80px #00f6ff;
+  z-index: -1;
+  opacity: 0.7;
+  pointer-events: none;
+}
