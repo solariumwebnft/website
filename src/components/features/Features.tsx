@@ -2,7 +2,6 @@ import React from "react";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 import Image from "next/image";
 import { StickyScroll } from "../ui/sticky-scroll-reveal";
-import { motion } from "framer-motion";
 
 const Features = () => {
   const content = [
@@ -70,11 +69,11 @@ const Features = () => {
   const buttonImages = ["/pokemon-1.svg", "/pokemon-2.svg", "/pokemon-3.svg"];
 
   return (
-    <main className="z-50 h-full justify-center gap-20 px-8 text-white">
-      <div className="z-20 flex justify-center text-center text-4xl">
+    <main className="h-full justify-center gap-20 px-8 text-white">
+      <div className="flex justify-center text-center text-4xl">
         logo Solarium
       </div>{" "}
-      <div className="z-20 flex justify-center text-center text-sm lg:max-w-[900px]">
+      <div className="flex justify-center text-center text-sm lg:max-w-[900px]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu metus
         ornare, iaculis dui non, rhoncus leo. Duis ut neque mi. Proin a
         convallis ipsum

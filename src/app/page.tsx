@@ -25,12 +25,13 @@ import "swiper/css/pagination";
  * @todo When refresh or first load, add a loading screen with useTimeout to avoid flickering(possibly find a better way to handle with this please).
  * @todo fix opacity of svg bg image in features. The opacity should be partial, from bottom to center with no opacity.
  * @todo ADD hover to svg image in features component
+ * @todo fix all site z-index.
  */
 
 export default function Home() {
   return (
-    <main className="relative m-0 flex h-full w-full flex-col items-center justify-between bg-black p-0">
-      <div className="absolute inset-0 h-full w-full">
+    <main className="relative z-[0] m-0 flex h-full w-full flex-col items-center justify-between bg-black p-0">
+      <div className="absolute inset-0 z-[-10] h-full w-full">
         <SparklesCore
           id="tsparticlesfullpage2"
           background="transparent"
@@ -41,14 +42,13 @@ export default function Home() {
           particleColor="#FFFFFF"
         />
       </div>
-
       <Navbar />
       <NFTComponent />
       <Slider />
-      <CallToAction />
       <Features />
-      <GridLayoutMedia />
       <Stepbystep />
+      <GridLayoutMedia />
+      <CallToAction />
       <Footer />
     </main>
   );

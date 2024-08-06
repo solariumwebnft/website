@@ -32,8 +32,8 @@ export const CallToAction = () => {
             Discover, create and sell your own NFT
           </h2>
           <div className="flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0">
-            <Button className="button-glass z-10">Explore Now</Button>
-            <Button className="button-glass z-10">Create Your First NFT</Button>
+            <Button className="button-glass">Explore Now</Button>
+            <Button className="button-glass">Create Your First NFT</Button>
           </div>
         </div>
         <section className="relative hidden lg:bottom-24 lg:flex lg:space-x-4">

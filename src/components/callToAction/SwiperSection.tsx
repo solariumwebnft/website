@@ -40,10 +40,7 @@ export const SwiperSection = ({
       className="swiper_container flex max-h-[500px]"
     >
       {images.map((img, index) => (
-        <SwiperSlide
-          key={index}
-          className="z-10 overflow-hidden rounded-xl p-4"
-        >
+        <SwiperSlide key={index} className="overflow-hidden rounded-xl p-4">
           <Image
             src={img}
             alt="nft"
