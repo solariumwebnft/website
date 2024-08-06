@@ -1,3 +1,4 @@
+"use client";
 import { CallToAction } from "@/components/callToAction/CallToAction";
 import Features from "@/components/features/Features";
 import { Footer } from "@/components/footer";
@@ -8,6 +9,8 @@ import { NFTComponent } from "@/components/NTF/NFTComponent";
 import { Slider } from "@/components/slider";
 import { Stepbystep } from "@/components/stepbystep";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -26,12 +29,19 @@ import "swiper/css/pagination";
  * @todo When refresh or first load, add a loading screen with useTimeout to avoid flickering(possibly find a better way to handle with this please).
  * @todo fix opacity of svg bg image in features. The opacity should be partial, from bottom to center with no opacity.
  * @todo ADD hover to svg image in features component
+ * @todo [done] fix all site z-index.
  */
 
 export default function Home() {
+  const [loading, setLoading] = useState(false);
+
+  setTimeout(() => {
+    setLoading(true);
+  }, 800);
+
   return (
-    <main className="relative m-0 flex h-full w-full flex-col items-center justify-between bg-black p-0">
-      <div className="absolute inset-0 h-full w-full">
+    <main className="relative z-[0] m-0 flex h-full w-full flex-col items-center justify-between bg-black p-0">
+      <div className="absolute inset-0 z-[-10] h-full w-full">
         <SparklesCore
           id="tsparticlesfullpage2"
           background="transparent"
@@ -42,16 +52,42 @@ export default function Home() {
           particleColor="#FFFFFF"
         />
       </div>
+      {!loading ? (
+        <div className="flex min-h-[100vh] min-w-[100vw] items-center justify-center">
+          <div className="flex max-h-[50px] min-w-[50px] bg-white">
+            carregando!
+          </div>
+        </div>
+      ) : (
+        <div className="max-w-full items-center">
+          <Navbar />
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          > 
+            <Hero />
+            <NFTComponent />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <Slider />
+          </motion.div>
+          <Features />
+          <Stepbystep />
+          <GridLayoutMedia />
+          <CallToAction />
+          <Footer />
+        </div>
+      )}
 
-      <Navbar />
-      <Hero />
-      <NFTComponent />
-      <Slider />
-      <CallToAction />
-      <Features />
-      <GridLayoutMedia />
-      <Stepbystep />
-      <Footer />
+
+     
+     
+
     </main>
   );
 }

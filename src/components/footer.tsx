@@ -1,12 +1,10 @@
 import { footerData } from "@/lib/footerData";
 import { FooterLogo } from "@/lib/footerLogo";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { buttonVariants } from "./ui/button";
 
 export const Footer = () => {
   return (
-    <footer className="z-10 w-full bg-black py-6 text-white">
+    <footer className="w-full bg-black py-6 text-white">
       <div className="flex flex-col justify-center md:flex-row">
         <FooterLogo />
         <div className="flex flex-wrap justify-center px-10">

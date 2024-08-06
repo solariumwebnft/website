@@ -60,7 +60,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 
 const ImageComponent = ({ card }: { card: Card }) => {
   return (
-    <div>
+    <>
       {card.id === 2 ? (
         <motion.video
           layoutId={`image-${card.id}-image`}
@@ -82,7 +82,7 @@ const ImageComponent = ({ card }: { card: Card }) => {
           )}
         />
       )}
-    </div>
+    </>
   );
 };
 

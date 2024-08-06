@@ -21,12 +21,10 @@ export const StickyScroll = ({
   const [isMobile, setIsMobile] = useState(false);
   const ref = useRef<any>(null);
 
-  // Function to detect mobile screen
   const checkIsMobile = () => {
-    setIsMobile(window.innerWidth <= 768); // Define mobile width threshold
+    setIsMobile(window.innerWidth <= 768);
   };
 
-  // Initial positions for desktop
   const initialPositionsDesktop = [
     { top: "-10%", left: "110%" },
     { top: "50%", left: "135%" },
@@ -64,7 +62,6 @@ export const StickyScroll = ({
         <motion.div
           initial={{ scale: 1, rotate: 0 }}
           animate={{ scale: 1, rotate: 360 }}
-          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
           style={{
             position: "absolute",
             zIndex: -1,
@@ -78,20 +75,22 @@ export const StickyScroll = ({
             key={index}
             initial={{
               opacity: 0,
-              scale: 0.8,
+              scale: 0.3,
+              x: 0,
             }}
             animate={{
               opacity: activeCard === index ? 1 : 0,
-              scale: activeCard === index ? 1 : 0.8,
+              scale: activeCard === index ? 1 : 0.5,
+              x: activeCard === index ? 0 : -200,
             }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
             style={{
               position: activeCard === index ? "relative" : "absolute",
               top: isMobile ? -180 : -70,
               left: isMobile ? 0 : 40,
               width: isMobile ? "100%" : "80%",
               height: isMobile ? "100%" : "80%",
-              zIndex: activeCard === index ? 1 : 0,
+              zIndex: activeCard === index ? 10 : 10,
             }}
           >
             {item.content}
@@ -129,7 +128,7 @@ export const StickyScroll = ({
             >
               <motion.button
                 key={index}
-                className={`z-50 rounded-full bg-blue-500 p-2 text-white ${isActive ? "active-neon-button" : ""}`}
+                className={`z-10 rounded-full bg-blue-500 p-2 text-white ${isActive ? "active-neon-button" : ""}`}
                 onClick={() => setIndex(index)}
                 style={{
                   width: "60px",

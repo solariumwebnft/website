@@ -125,7 +125,7 @@ export const Slider = () => {
                   <Image
                     src={src}
                     alt={`Slide ${index + 1}`}
-                    className="z-50 scale-105 transform transition-transform duration-300 ease-in-out will-change-transform hover:scale-125"
+                    className="z-10 scale-105 transform transition-transform duration-300 ease-in-out will-change-transform hover:scale-125"
                     width={500}
                     height={500}
                   />
