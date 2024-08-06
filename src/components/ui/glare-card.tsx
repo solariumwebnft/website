@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 
 export const GlareCard = ({
