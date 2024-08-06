@@ -1,9 +1,11 @@
 import { CallToAction } from "@/components/callToAction/CallToAction";
 import Features from "@/components/features/Features";
+import { Footer } from "@/components/footer";
 import { GridLayoutMedia } from "@/components/layoutMedia/GridLayoutMedia";
 import { Navbar } from "@/components/navbar";
 import { NFTComponent } from "@/components/NTF/NFTComponent";
 import { Slider } from "@/components/slider";
+import { Stepbystep } from "@/components/stepbystep";
 import { SparklesCore } from "@/components/ui/sparkles";
 
 import "swiper/css";
@@ -46,6 +48,8 @@ export default function Home() {
       <CallToAction />
       <Features />
       <GridLayoutMedia />
+      <Stepbystep />
+      <Footer />
     </main>
   );
 }
