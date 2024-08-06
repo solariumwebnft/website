@@ -2,6 +2,7 @@
 import { CallToAction } from "@/components/callToAction/CallToAction";
 import Features from "@/components/features/Features";
 import { Footer } from "@/components/footer";
+import { Hero } from "@/components/hero";
 import { GridLayoutMedia } from "@/components/layoutMedia/GridLayoutMedia";
 import { Navbar } from "@/components/navbar";
 import { NFTComponent } from "@/components/NTF/NFTComponent";
@@ -64,7 +65,8 @@ export default function Home() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-          >
+          > 
+            <Hero />
             <NFTComponent />
           </motion.div>
           <motion.div
@@ -81,6 +83,11 @@ export default function Home() {
           <Footer />
         </div>
       )}
+
+
+     
+     
+
     </main>
   );
 }
