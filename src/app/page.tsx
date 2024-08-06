@@ -62,10 +62,11 @@ export default function Home() {
         <div className="max-w-full items-center">
           <Navbar />
           <motion.div
+            className="px-4"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-          > 
+          >
             <Hero />
             <NFTComponent />
           </motion.div>
@@ -83,11 +84,6 @@ export default function Home() {
           <Footer />
         </div>
       )}
-
-
-     
-     
-
     </main>
   );
 }
