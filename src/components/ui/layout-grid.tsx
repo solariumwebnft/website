@@ -39,7 +39,9 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
             )}
             layoutId={`card-${card.id}`}
           >
-            {selected?.id === card.id && <SelectedCard selected={selected} />}
+            {selected?.id === card.id && card.id != 2 && (
+              <SelectedCard selected={selected} />
+            )}
             <ImageComponent card={card} />
           </motion.div>
         </div>
@@ -58,17 +60,18 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 
 const ImageComponent = ({ card }: { card: Card }) => {
   return (
-    <div className="">
-      {card.id === 1 ? (
+    <div>
+      {card.id === 2 ? (
         <motion.video
           layoutId={`image-${card.id}-image`}
           className={cn(
             "absolute inset-0 h-full w-full object-cover object-top transition duration-200",
           )}
           autoPlay
+          controls
           loop
           muted
-          src="https://www.w3schools.com/html/mov_bbb.mp4"
+          src="/video.mp4"
         />
       ) : (
         <motion.img
