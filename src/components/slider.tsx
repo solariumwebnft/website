@@ -73,7 +73,7 @@ export const Slider = () => {
         }}
         resistanceRatio={1}
         mousewheel={{
-          enabled: true,
+          enabled: false,
         }}
         speed={800}
         threshold={5}
