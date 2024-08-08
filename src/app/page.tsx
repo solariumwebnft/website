@@ -17,6 +17,11 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import dynamic from "next/dynamic";
+
+const Scene = dynamic(() => import("@/components/3Dmodels/Scene"), {
+  ssr: false,
+});
 /**
  *
  * @todo - [done] Fix nft card shaking while perspective effect.
@@ -92,6 +97,7 @@ export default function Home() {
           >
             <Slider />
           </motion.div>
+
           <Features />
           <Stepbystep />
           <GridLayoutMedia />
