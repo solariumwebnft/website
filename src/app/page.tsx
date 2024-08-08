@@ -27,7 +27,7 @@ import "swiper/css/pagination";
  * @todo [done] in layoutMedia component fix the modafoka white board at the corners
  * @todo in LayoutMedia component we should find a better way to handle with selected content. (waiting for design)
  * @todo When refresh or first load, add a loading screen with useTimeout to avoid flickering(possibly find a better way to handle with this please).
- * @todo fix opacity of svg bg image in features. The opacity should be partial, from bottom to center with no opacity.
+ * @todo [done] fix opacity of svg bg image in features. The opacity should be partial, from bottom to center with no opacity.
  * @todo ADD hover to svg image in features component
  * @todo [done] fix all site z-index.
  */
