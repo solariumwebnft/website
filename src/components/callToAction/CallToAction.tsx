@@ -14,7 +14,7 @@ import { ParticlesCore } from "../ui/particles";
 export const CallToAction = () => {
   return (
     <main className="p-8">
-      <section className="relative z-20 mt-24 flex max-h-[268px] max-w-screen-2xl flex-col justify-between overflow-hidden rounded-3xl bg-primary px-[24px] md:flex-row lg:pr-[40px]">
+      <section className="relative z-20 mt-24 flex max-h-[268px] w-full max-w-screen-2xl flex-col justify-between overflow-hidden rounded-3xl bg-primary px-[24px] md:flex-row lg:mx-auto lg:px-24 lg:py-12">
         <div className="absolute inset-0 h-full w-full">
           <ParticlesCore
             id="tsparticlesfullpage"
