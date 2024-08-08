@@ -60,16 +60,24 @@ export default function Home() {
         </div>
       ) : (
         <div className="max-w-full items-center">
-          <Navbar />
           <motion.div
             className="px-4"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0 }}
+          >
+            <Navbar />
+          </motion.div>
+
+          <motion.div
+            className="px-4"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
           >
             <Hero />
-            <NFTComponent />
           </motion.div>
+          <NFTComponent />
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
