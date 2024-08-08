@@ -25,10 +25,10 @@ const config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        background: "#050810",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "#0066B2",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -52,7 +52,7 @@ const config = {
           foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
+          DEFAULT: "#1E1E1E",
           foreground: "hsl(var(--card-foreground))",
         },
       },

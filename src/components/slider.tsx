@@ -119,7 +119,7 @@ export const Slider = () => {
               <SwiperSlide
                 onClick={() => handleSlideClick(index)}
                 key={index}
-                className="rounded-xl bg-gray-800 p-4 md:max-w-[500px]"
+                className="rounded-xl bg-card p-4 md:max-w-[500px]"
               >
                 <div className="overflow-hidden rounded-xl hover:shadow-lg">
                   <Image

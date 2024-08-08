@@ -205,27 +205,27 @@
 @keyframes neonBorder {
   0% {
     box-shadow:
-      0 0 5px #00f6ff,
-      0 0 15px #00f6ff,
-      0 0 20px #00f6ff,
-      0 0 40px #00f6ff;
-    border-color: #00f6ff;
+      0 0 5px #0066b2,
+      0 0 15px #0066b2,
+      0 0 20px #0066b2,
+      0 0 40px #0066b2;
+    border-color: #0066b2;
   }
   50% {
     box-shadow:
-      0 0 10px #00f6ff,
-      0 0 15px #00f6ff,
-      0 0 30px #00f6ff,
-      0 0 60px #00f6ff;
-    border-color: #00f6ff;
+      0 0 10px #0066b2,
+      0 0 15px #0066b2,
+      0 0 30px #0066b2,
+      0 0 60px #0066b2;
+    border-color: #0066b2;
   }
   100% {
     box-shadow:
-      0 0 5px #00f6ff,
-      0 0 11px #00f6ff,
-      0 0 20px #00f6ff,
-      0 0 50px #00f6ff;
-    border-color: #00f6ff;
+      0 0 5px #0066b2,
+      0 0 11px #0066b2,
+      0 0 20px #0066b2,
+      0 0 50px #0066b2;
+    border-color: #0066b2;
   }
 }
 
@@ -250,12 +250,12 @@
 }
 .neon-glow {
   position: relative;
-  background: linear-gradient(to right, #00f6ff, #0066ff);
+  background: linear-gradient(to right, rgb(2, 48, 89), #0969b3);
   box-shadow:
-    0 0 5px #00f6ff,
-    0 0 15px #00f6ff,
-    0 0 30px #00f6ff,
-    0 0 60px #00f6ff;
+    0 0 5px #0969b3,
+    0 0 10px #0969b3,
+    0 0 15px #0969b3,
+    0 0 30px #0969b3;
   filter: brightness(1.2);
   border-radius: 4px;
   height: 4px;

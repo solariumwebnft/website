@@ -26,7 +26,7 @@ import "swiper/css/pagination";
  * @explain Lets try to find a better way to pre-render the images, we should understand better how 'loop' and end of carrousel is working in next.
  * @todo [done] in layoutMedia component fix the modafoka white board at the corners
  * @todo in LayoutMedia component we should find a better way to handle with selected content. (waiting for design)
- * @todo When refresh or first load, add a loading screen with useTimeout to avoid flickering(possibly find a better way to handle with this please).
+ * @todo [done] When refresh or first load, add a loading screen with useTimeout to avoid flickering(possibly find a better way to handle with this please).
  * @todo fix opacity of svg bg image in features. The opacity should be partial, from bottom to center with no opacity.
  * @todo ADD hover to svg image in features component
  * @todo [done] fix all site z-index.
@@ -40,7 +40,7 @@ export default function Home() {
   }, 800);
 
   return (
-    <main className="relative z-[0] m-0 flex h-full w-full flex-col items-center justify-between bg-black p-0">
+    <main className="relative z-[0] m-0 flex h-full w-full flex-col items-center justify-between bg-background p-0">
       <div className="absolute inset-0 z-[-10] h-full w-full">
         <SparklesCore
           id="tsparticlesfullpage2"

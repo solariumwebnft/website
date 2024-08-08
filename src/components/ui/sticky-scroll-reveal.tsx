@@ -128,7 +128,7 @@ export const StickyScroll = ({
             >
               <motion.button
                 key={index}
-                className={`z-10 rounded-full bg-blue-500 p-2 text-white ${isActive ? "active-neon-button" : ""}`}
+                className={`z-10 rounded-full bg-primary p-2 text-white ${isActive ? "active-neon-button" : ""}`}
                 onClick={() => setIndex(index)}
                 style={{
                   width: "60px",

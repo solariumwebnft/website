@@ -14,7 +14,7 @@ import { ParticlesCore } from "../ui/particles";
 export const CallToAction = () => {
   return (
     <main className="p-8">
-      <section className="relative z-20 mt-24 flex max-h-[268px] max-w-screen-2xl flex-col justify-between overflow-hidden rounded-3xl bg-gray-800 px-[24px] md:flex-row lg:pr-[40px]">
+      <section className="relative z-20 mt-24 flex max-h-[268px] max-w-screen-2xl flex-col justify-between overflow-hidden rounded-3xl bg-primary px-[24px] md:flex-row lg:pr-[40px]">
         <div className="absolute inset-0 h-full w-full">
           <ParticlesCore
             id="tsparticlesfullpage"
@@ -32,8 +32,12 @@ export const CallToAction = () => {
             Discover, create and sell your own NFT
           </h2>
           <div className="flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0">
-            <Button className="button-glass">Explore Now</Button>
-            <Button className="button-glass">Create Your First NFT</Button>
+            <Button className="button-glass" variant="white">
+              Explore Now
+            </Button>
+            <Button className="button-glass" variant="ghostLink">
+              Create Your First NFT
+            </Button>
           </div>
         </div>
         <section className="relative hidden lg:bottom-24 lg:flex lg:space-x-4">
