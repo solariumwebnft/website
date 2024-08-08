@@ -65,10 +65,9 @@ export const StickyScroll = ({
           style={{
             position: "absolute",
             zIndex: -1,
-            opacity: 0.75,
           }}
         >
-          <Image src="/circle.png" alt="" width={500} height={500} />
+          <Image src="/circle.svg" alt="" width={500} height={500} />
         </motion.div>
         {content.map((item, index) => (
           <motion.div
