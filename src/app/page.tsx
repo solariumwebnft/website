@@ -33,7 +33,7 @@ import "swiper/css/pagination";
  * @todo ADD hover to svg image in features component
  * @todo [done] add correct theme
  * @todo [done] fix all site z-index.
- * @TODO remove scroll of carrousell
+ * @TODO [done] remove scroll of carrousell
  * @todo fix features component height
  * @todo fix the width of call to action component
  * @todo SEO
