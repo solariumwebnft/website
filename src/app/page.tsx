@@ -19,8 +19,8 @@ import "swiper/css/pagination";
 
 /**
  *
- * @todo - Fix nft card shaking while perspective effect.
- * @explain We should reduce number of runs component run, and increase smoothness between one run to another.
+ * @todo - [done] Fix nft card shaking while perspective effect.
+ * @explain [done] We should reduce number of runs component run, and increase smoothness between one run to another.
  * @todo In Call to Action card we should find a way to limit of vetores rendered at the same time, this WILL cause crash!!
  * @todo In carousel component, when the images finish, despite the fact that the images are looped, the carousel stops pre-rendering.
  * @explain Lets try to find a better way to pre-render the images, we should understand better how 'loop' and end of carrousel is working in next.
@@ -28,10 +28,15 @@ import "swiper/css/pagination";
  * @todo in LayoutMedia component we should find a better way to handle with selected content. (waiting for design)
  * @todo [done] When refresh or first load, add a loading screen with useTimeout to avoid flickering(possibly find a better way to handle with this please).
  * @todo fix opacity of svg bg image in features. The opacity should be partial, from bottom to center with no opacity.
- * @todo When refresh or first load, add a loading screen with useTimeout to avoid flickering(possibly find a better way to handle with this please).
+ * @todo [done] When refresh or first load, add a loading screen with useTimeout to avoid flickering(possibly find a better way to handle with this please).
  * @todo [done] fix opacity of svg bg image in features. The opacity should be partial, from bottom to center with no opacity.
  * @todo ADD hover to svg image in features component
+ * @todo [done] add correct theme
  * @todo [done] fix all site z-index.
+ * @TODO remove scroll of carrousell
+ * @todo fix features component height
+ * @todo fix the width of call to action component
+ * @todo SEO
  */
 
 export default function Home() {
