@@ -35,7 +35,7 @@ import "swiper/css/pagination";
  * @todo [done] fix all site z-index.
  * @TODO [done] remove scroll of carrousell
  * @todo fix features component height
- * @todo fix the width of call to action component
+ * @todo [done] fix the width of call to action component (PAY ATTENTION TO THE RESPONSIVE)
  * @todo SEO
  */
 
