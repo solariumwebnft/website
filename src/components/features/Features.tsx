@@ -78,22 +78,21 @@ const Features = () => {
       ),
     },
   ];
-
   const buttonImages = ["/pokemon-1.svg", "/pokemon-2.svg", "/pokemon-3.svg"];
   return (
-    <main className="h-full justify-center px-8 text-white">
+    <main className="h-full w-full justify-center px-8 text-white">
       <div className="flex justify-center text-center text-4xl">
         logo Solarium
       </div>
-      <div className="text-md flex justify-center px-40 text-center">
+      <div className="text-md flex justify-center text-center md:px-40">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu metus
         ornare, iaculis dui non, rhoncus leo. Duis ut neque mi. Proin a
         convallis ipsum
       </div>
       <motion.div
         ref={ref}
-        animate={isInView ? { opacity: 1, x: -50 } : { opacity: 0, x: 0 }}
-        transition={{ duration: 0.5 }}
+        // animate={isInView ? { opacity: 1, x: -50 } : { opacity: 0, x: 0 }}
+        // transition={{ duration: 0.5 }}
       >
         <StickyScroll content={content} buttonImages={buttonImages} />
       </motion.div>

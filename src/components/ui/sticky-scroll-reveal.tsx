@@ -22,7 +22,7 @@ export const StickyScroll = ({
   const ref = useRef<any>(null);
 
   const checkIsMobile = () => {
-    setIsMobile(window.innerWidth <= 768);
+    setIsMobile(window.innerWidth <= 968);
   };
 
   const initialPositionsDesktop = [
@@ -53,7 +53,7 @@ export const StickyScroll = ({
 
   return (
     <motion.div
-      className="flex h-[45rem] justify-center rounded-md p-10 pt-28 md:h-[50rem] md:pr-[15rem]"
+      className="flex h-[45rem] justify-center rounded-md p-10 pt-28 md:h-[50rem] lg:pr-[15rem]"
       ref={ref}
     >
       <div
@@ -159,7 +159,7 @@ export const StickyScroll = ({
                     width: "200px",
                   }}
                 >
-                  <div className="min-w-[280px] md:max-w-[300px] lg:w-[400px]">
+                  <div className="min-w-[280px] md:max-w-[200px] lg:w-[400px]">
                     <div>{item.title}</div>
                     <motion.div
                       className="neon-glow"
