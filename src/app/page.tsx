@@ -25,7 +25,7 @@ import "swiper/css/pagination";
  * @todo In carousel component, when the images finish, despite the fact that the images are looped, the carousel stops pre-rendering.
  * @explain Lets try to find a better way to pre-render the images, we should understand better how 'loop' and end of carrousel is working in next.
  * @todo [done] in layoutMedia component fix the modafoka white board at the corners
- * @todo  in LayoutMedia component we should find a better way to handle with selected content. (waiting for design)
+ * @todo in LayoutMedia component we should find a better way to handle with selected content. (waiting for design)
  * @todo When refresh or first load, add a loading screen with useTimeout to avoid flickering(possibly find a better way to handle with this please).
  * @todo fix opacity of svg bg image in features. The opacity should be partial, from bottom to center with no opacity.
  * @todo ADD hover to svg image in features component
