@@ -18,7 +18,7 @@ export function NFTComponent() {
         <div className="space-y-4 text-white">
           <h1 className="text-4xl font-bold">
             <Highlight>The World’s Leading Cryptocurrency Platform</Highlight>
-            <TextGenerateEffect words={words} activeCard={1} index={1} />
+            {/* <TextGenerateEffect words={words} activeCard={1} index={1} /> */}
           </h1>
           <h2 className="font-thin">
             Buy and sell NFTs from the world’s top artists. More than 1.000

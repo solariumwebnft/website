@@ -83,9 +83,6 @@ export const Slider = () => {
         }}
         autoplay={{ delay: 5000 }}
         modules={[EffectCoverflow, Pagination, Navigation, EffectCards]}
-        // cardsEffect={{
-        //   rotate: true,
-        // }}
         pagination={{
           clickable: true,
           dynamicBullets: true,
@@ -119,7 +116,7 @@ export const Slider = () => {
               <SwiperSlide
                 onClick={() => handleSlideClick(index)}
                 key={index}
-                className="rounded-xl bg-card p-4 md:max-w-[500px]"
+                className="rounded-[20px] bg-card p-[10px] md:max-w-[500px]"
               >
                 <div className="overflow-hidden rounded-xl hover:shadow-lg">
                   <Image

@@ -39,8 +39,9 @@ const Scene = dynamic(() => import("@/components/3Dmodels/Scene"), {
  * @todo [done] add correct theme
  * @todo [done] fix all site z-index.
  * @TODO [done] remove scroll of carrousell
- * @todo fix features component height
+ * @todo [done] fix features component height
  * @todo [done] fix the width of call to action component (PAY ATTENTION TO THE RESPONSIVE)
+ * @todo [] add background to sessions
  * @todo SEO
  */
 

@@ -1,11 +1,9 @@
 import React, { useRef } from "react";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
-import Image from "next/image";
 import { StickyScroll } from "../ui/sticky-scroll-reveal";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Scene from "../3Dmodels/Scene";
 import Base from "../3Dmodels/Base";
-import Character from "../3Dmodels/CharacterModel";
 import CharacterScene from "../3Dmodels/CharacterScene";
 
 const Features = () => {
@@ -71,7 +69,7 @@ const Features = () => {
   ];
   const buttonImages = ["/base.svg", "/pokemon-4.svg", "/character.svg"];
   return (
-    <main className="h-full w-full justify-center px-16 text-white">
+    <main className="h-full w-full justify-center px-12 pb-48 text-white lg:px-32">
       <div className="flex justify-center text-center text-4xl">
         logo Solarium
       </div>
