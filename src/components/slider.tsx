@@ -83,9 +83,6 @@ export const Slider = () => {
         }}
         autoplay={{ delay: 5000 }}
         modules={[EffectCoverflow, Pagination, Navigation, EffectCards]}
-        // cardsEffect={{
-        //   rotate: true,
-        // }}
         pagination={{
           clickable: true,
           dynamicBullets: true,

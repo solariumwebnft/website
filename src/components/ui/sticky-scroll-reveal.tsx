@@ -19,10 +19,13 @@ export const StickyScroll = ({
 }) => {
   const [activeCard, setActiveCard] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
   const ref = useRef<any>(null);
 
-  const checkIsMobile = () => {
-    setIsMobile(window.innerWidth <= 968);
+  const checkDevice = () => {
+    const width = window.innerWidth;
+    setIsMobile(width <= 768);
+    setIsTablet(width > 768 && width <= 1024);
   };
 
   const initialPositionsDesktop = [
@@ -37,17 +40,16 @@ export const StickyScroll = ({
     { top: "230%", left: "-10%" },
   ];
 
-  const initialPositions = isMobile
-    ? initialPositionsMobile
-    : initialPositionsDesktop;
+  const initialPositions =
+    isMobile || isTablet ? initialPositionsMobile : initialPositionsDesktop;
 
   const setIndex = (index: number) => {
     setActiveCard(index);
   };
 
   useEffect(() => {
-    checkIsMobile();
-    window.addEventListener("resize", checkIsMobile);
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
   }, []);
 
   return (
@@ -64,7 +66,7 @@ export const StickyScroll = ({
           style={{
             position: "absolute",
             zIndex: -1,
-            width: isMobile ? "300px" : "600px",
+            width: isMobile ? "300px" : isTablet ? "400px" : "600px",
           }}
         >
           <Image src="/circle.svg" alt="" width={800} height={800} />
@@ -85,10 +87,10 @@ export const StickyScroll = ({
             transition={{ duration: 0.3 }}
             style={{
               position: activeCard === index ? "relative" : "absolute",
-              top: isMobile ? 0 : -30,
-              left: isMobile ? -50 : 60,
-              width: isMobile ? "60%" : "90%",
-              height: isMobile ? "60%" : "90%",
+              top: isMobile || isTablet ? 0 : -30,
+              left: isMobile || isTablet ? -50 : 60,
+              width: isMobile || isTablet ? "60%" : "90%",
+              height: isMobile || isTablet ? "60%" : "90%",
             }}
           >
             {item.content}
