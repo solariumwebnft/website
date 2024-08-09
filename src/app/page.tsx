@@ -37,6 +37,13 @@ import "swiper/css/pagination";
  * @todo fix features component height
  * @todo [done] fix the width of call to action component (PAY ATTENTION TO THE RESPONSIVE)
  * @todo SEO
+ * @todo icone da tab do navegador
+ * @todo metadados
+ * @todo [done] titulo do site
+ * @todo descricao do site
+ * @todo site map
+ * @todo robots.txt
+ * @todo open graph
  */
 
 export default function Home() {
