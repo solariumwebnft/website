@@ -4,7 +4,7 @@ import { LayoutGrid } from "../ui/layout-grid";
 
 export function GridLayoutMedia() {
   return (
-    <div className="flex h-screen w-full flex-col items-center">
+    <div className="flex h-screen flex-col items-center">
       <div className="flex justify-between text-4xl font-bold text-white sm:px-8 md:px-8 lg:px-0">
         <h1>Descobertas do mes</h1>
       </div>

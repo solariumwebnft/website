@@ -6,7 +6,7 @@ export const Stepbystep = () => {
   return (
     <div className="relative">
       <div
-        className="absolute inset-0 -bottom-[25%] -top-[60%] z-[-10]"
+        className="absolute inset-0 -bottom-[35%] -top-[60%] z-[-10]"
         style={{
           background: `
             url('/background1.svg') center/cover no-repeat`,
@@ -15,7 +15,7 @@ export const Stepbystep = () => {
           minHeight: "90vh",
         }}
       />
-      <div className="container relative z-10 py-10 pb-[15rem]">
+      <div className="container relative z-10 max-w-[1110px] py-10 pb-[17rem] pt-[9rem]">
         <div aria-label="title" className="pb-10">
           <h1 className="text-center text-5xl font-medium text-white">
             Step by Step
