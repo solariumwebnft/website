@@ -4,9 +4,9 @@ import { steps } from "@/lib/steps";
 
 export const Stepbystep = () => {
   return (
-    <div className="relative">
+    <div className="relative -bottom-[25%] -top-[50%]">
       <div
-        className="absolute inset-0 -bottom-[35%] -top-[60%] z-[-10]"
+        className="absolute inset-0 -bottom-[25%] -top-[50%] z-[10]"
         style={{
           background: `
             url('/background1.svg') center/cover no-repeat`,
@@ -15,6 +15,7 @@ export const Stepbystep = () => {
           minHeight: "90vh",
         }}
       />
+      <div className="absolute inset-0 -bottom-[25%] -top-[50%] z-[-10] bg-background"></div>
       <div className="container relative z-10 max-w-[1110px] py-10 pb-[17rem] pt-[9rem]">
         <div aria-label="title" className="pb-10">
           <h1 className="text-center text-5xl font-medium text-white">
@@ -32,7 +33,7 @@ export const Stepbystep = () => {
                 <div className="flex flex-col space-y-4 text-center">
                   <div
                     aria-label="card"
-                    className="card mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-lg bg-gray-800"
+                    className="card mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-lg bg-card"
                   >
                     <Image
                       src={step.icon}
