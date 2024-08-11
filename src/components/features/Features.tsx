@@ -69,7 +69,7 @@ const Features = () => {
   ];
   const buttonImages = ["/base.svg", "/pokemon-4.svg", "/character.svg"];
   return (
-    <main className="h-full w-full justify-center px-12 pb-48 text-white lg:px-32">
+    <main className="h-full w-full justify-center px-12 py-48 text-white lg:px-32">
       <div className="flex justify-center text-center text-4xl">
         logo Solarium
       </div>
