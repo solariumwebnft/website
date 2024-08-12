@@ -20,6 +20,9 @@ import { Hero } from "@/components/hero/hero";
 import { Navbar } from "@/components/navbar/navbar";
 import { Slider } from "@/components/slider/slider";
 import { Stepbystep } from "@/components/stepbystep/stepbystep";
+import Image from "next/image";
+import { LoadingLogo } from "@/components/loadingLogo";
+import { SparklesBackground } from "@/components/sparklesBackground";
 
 const Scene = dynamic(() => import("@/components/3Dmodels/Scene"), {
   ssr: false,
@@ -50,7 +53,7 @@ const Scene = dynamic(() => import("@/components/3Dmodels/Scene"), {
  * @todo [done] titulo do site
  * @todo descricao do site
  * @todo [done] site map
- * @todo [done] robots.txt
+ * @todo robots.txt
  * @todo open graph
  */
 
@@ -63,24 +66,9 @@ export default function Home() {
 
   return (
     <main className="relative z-[0] m-0 flex h-full w-full flex-col items-center justify-between bg-background p-0">
-      {/* component */}
-      <div className="absolute inset-0 z-[-10] h-full w-full">
-        <SparklesCore
-          id="tsparticlesfullpage2"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={100}
-          className="h-full w-full"
-          particleColor="#FFFFFF"
-        />
-      </div>
+      <SparklesBackground />
       {!loading ? (
-        <div className="flex min-h-[100vh] min-w-[100vw] items-center justify-center">
-          <div className="flex max-h-[50px] min-w-[50px] bg-white">
-            carregando!
-          </div>
-        </div>
+        <LoadingLogo />
       ) : (
         <div className="max-w-full items-center">
           <motion.div
@@ -92,10 +80,9 @@ export default function Home() {
             <Navbar />
           </motion.div>
 
-          {/* component generico pra motion div com valores padroes */}
           <motion.div
             className="px-8"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
@@ -103,7 +90,7 @@ export default function Home() {
           </motion.div>
           <NFTComponent />
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
