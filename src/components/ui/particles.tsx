@@ -75,7 +75,7 @@ export const ParticlesCore = (props: ParticlesProps) => {
                   quantity: 0.3,
                 },
                 connect: {
-                  distance: 400,
+                  distance: 800,
                 },
                 repulse: {
                   distance: 100,
@@ -88,11 +88,11 @@ export const ParticlesCore = (props: ParticlesProps) => {
                 value: "#ffffff",
               },
               links: {
-                color: "background",
-                distance: 30,
+                color: "#ffffff",
+                distance: 180,
                 enable: true,
-                opacity: 0.1,
-                width: 0.1,
+                opacity: 0.8,
+                width: 0.5,
               },
               move: {
                 direction: "none",
@@ -117,7 +117,7 @@ export const ParticlesCore = (props: ParticlesProps) => {
                 type: "circle",
               },
               size: {
-                value: { min: 1, max: 6 },
+                value: { min: 1, max: 5 },
               },
             },
             detectRetina: true,
