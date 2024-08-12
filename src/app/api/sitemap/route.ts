@@ -1,22 +1,18 @@
 import { SitemapStream, streamToPromise } from "sitemap";
 import { Readable } from "stream";
 
-const sitemap = async (req: any, res: any) => {
-  if (!req || !res) {
-    return;
-  }
-
+export async function GET(req: Request) {
   const links = [{ url: "/", changeFreq: "daily", priority: 1 }];
-  const host = req.headers?.host || "localhost:3000";
+  const host = req.headers.get("host");
 
   const stream = new SitemapStream({ hostname: `https://${host}` });
-  res.setHeader("Content-Type", "application/xml");
-
   const xmlString = await streamToPromise(
     Readable.from(links).pipe(stream),
   ).then((data: any) => data.toString());
 
-  res.end(xmlString);
-};
-
-export default sitemap;
+  return new Response(xmlString, {
+    headers: {
+      "Content-Type": "application/xml",
+    },
+  });
+}
