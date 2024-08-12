@@ -17,6 +17,11 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import dynamic from "next/dynamic";
+
+const Scene = dynamic(() => import("@/components/3Dmodels/Scene"), {
+  ssr: false,
+});
 /**
  *
  * @todo - [done] Fix nft card shaking while perspective effect.
@@ -34,8 +39,9 @@ import "swiper/css/pagination";
  * @todo [done] add correct theme
  * @todo [done] fix all site z-index.
  * @TODO [done] remove scroll of carrousell
- * @todo fix features component height
+ * @todo [done] fix features component height
  * @todo [done] fix the width of call to action component (PAY ATTENTION TO THE RESPONSIVE)
+ * @todo [] add background to sessions
  * @todo SEO
  * @todo icone da tab do navegador
  * @todo metadados
@@ -84,7 +90,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="px-4"
+            className="px-8"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -99,6 +105,7 @@ export default function Home() {
           >
             <Slider />
           </motion.div>
+
           <Features />
           <Stepbystep />
           <GridLayoutMedia />

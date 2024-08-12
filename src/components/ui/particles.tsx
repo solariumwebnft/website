@@ -58,11 +58,11 @@ export const ParticlesCore = (props: ParticlesProps) => {
               enable: false,
               zIndex: 1,
             },
-            fpsLimit: 120,
+            fpsLimit: 60,
             interactivity: {
               events: {
                 onClick: {
-                  enable: true,
+                  enable: false,
                   mode: "push",
                 },
                 onHover: {
@@ -89,9 +89,9 @@ export const ParticlesCore = (props: ParticlesProps) => {
               },
               links: {
                 color: "#ffffff",
-                distance: 150,
+                distance: 180,
                 enable: true,
-                opacity: 0.5,
+                opacity: 0.8,
                 width: 0.5,
               },
               move: {
@@ -101,14 +101,14 @@ export const ParticlesCore = (props: ParticlesProps) => {
                   default: "bounce",
                 },
                 random: false,
-                speed: 4,
+                speed: 1,
                 straight: false,
               },
               number: {
                 density: {
                   enable: true,
                 },
-                value: 400,
+                value: 100,
               },
               opacity: {
                 value: 0.15,
@@ -117,7 +117,7 @@ export const ParticlesCore = (props: ParticlesProps) => {
                 type: "circle",
               },
               size: {
-                value: { min: 1, max: 6 },
+                value: { min: 1, max: 5 },
               },
             },
             detectRetina: true,

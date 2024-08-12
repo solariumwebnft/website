@@ -6,8 +6,8 @@ export const Footer = () => {
   return (
     <footer className="w-full bg-background py-6 text-white">
       <div className="flex flex-col justify-center md:flex-row">
-        <FooterLogo />
-        <div className="flex flex-wrap justify-center px-10">
+        <div className="flex max-w-[1110px] flex-wrap justify-center gap-6 px-8">
+          <FooterLogo />
           {footerData.map((section, index) => (
             <div
               key={index}

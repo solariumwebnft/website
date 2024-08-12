@@ -15,25 +15,29 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 import image from "../../assets/images/murangu.webp";
 import Image, { StaticImageData } from "next/image";
-import { motion } from "framer-motion";
 
 register();
-const images: StaticImageData[] = [
-  image,
-  image,
-  image,
-  image,
-  image,
-  image,
-  image,
-  image,
-  image,
-  image,
-  image,
-  image,
-  image,
-  image,
-  image,
+
+interface CardProps {
+  src: StaticImageData;
+  title: string;
+  price?: number;
+}
+
+const cardContent: CardProps[] = [
+  { src: image, title: "titulo" },
+  { src: image, title: "titulo" },
+  { src: image, title: "titulo" },
+  { src: image, title: "titulo" },
+  { src: image, title: "titulo" },
+  { src: image, title: "titulo" },
+  { src: image, title: "titulo" },
+  { src: image, title: "titulo" },
+  { src: image, title: "titulo" },
+  { src: image, title: "titulo" },
+  { src: image, title: "titulo" },
+  { src: image, title: "titulo" },
+  { src: image, title: "titulo" },
 ];
 
 export const Slider = () => {
@@ -83,9 +87,6 @@ export const Slider = () => {
         }}
         autoplay={{ delay: 5000 }}
         modules={[EffectCoverflow, Pagination, Navigation, EffectCards]}
-        // cardsEffect={{
-        //   rotate: true,
-        // }}
         pagination={{
           clickable: true,
           dynamicBullets: true,
@@ -114,25 +115,30 @@ export const Slider = () => {
           },
         }}
       >
-        {images.length > 0
-          ? images.map((src, index) => (
+        {cardContent.length > 0
+          ? cardContent.map((content, index) => (
               <SwiperSlide
                 onClick={() => handleSlideClick(index)}
                 key={index}
-                className="rounded-xl bg-card p-4 md:max-w-[500px]"
+                className="rounded-[20px] bg-card p-[10px] md:max-w-[500px]"
               >
                 <div className="overflow-hidden rounded-xl hover:shadow-lg">
                   <Image
-                    src={src}
+                    src={content.src}
                     alt={`Slide ${index + 1}`}
                     className="z-10 scale-105 transform transition-transform duration-300 ease-in-out will-change-transform hover:scale-125"
-                    width={500}
-                    height={500}
+                    width={600}
+                    height={600}
                   />
                 </div>
-                <h1 className="mt-3 flex justify-center rounded-md text-xl text-white">
-                  titulo
-                </h1>
+                <div className="mb-2 mt-3">
+                  <h1 className="flex justify-center rounded-md text-xl text-white">
+                    {content.title}
+                  </h1>
+                  <div className="flex justify-center rounded-md text-xl text-white">
+                    {content.price}
+                  </div>
+                </div>
               </SwiperSlide>
             ))
           : null}

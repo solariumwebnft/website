@@ -3,7 +3,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 export const Hero = () => {
   return (
-    <div className="relative flex min-h-[90vh] w-[100%] justify-center bg-background">
+    <div className="relative flex min-h-[82vh] w-[100%] justify-center bg-background px-8">
       <div className="flex justify-center px-8 py-2 text-white">
         <div className="absolute flex h-full w-full justify-center overflow-hidden rounded-lg">
           <video

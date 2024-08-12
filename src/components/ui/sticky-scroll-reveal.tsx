@@ -19,41 +19,42 @@ export const StickyScroll = ({
 }) => {
   const [activeCard, setActiveCard] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
   const ref = useRef<any>(null);
 
-  const checkIsMobile = () => {
-    setIsMobile(window.innerWidth <= 968);
+  const checkDevice = () => {
+    const width = window.innerWidth;
+    setIsMobile(width <= 768);
+    setIsTablet(width > 768 && width <= 1024);
   };
 
   const initialPositionsDesktop = [
-    { top: "-10%", left: "110%" },
-    { top: "50%", left: "135%" },
-    { top: "110%", left: "110%" },
+    { top: "-10%", left: "200%" },
+    { top: "95%", left: "240%" },
+    { top: "180%", left: "200%" },
   ];
 
   const initialPositionsMobile = [
-    { top: "120%", left: "-10%" },
     { top: "150%", left: "-10%" },
-    { top: "180%", left: "-10%" },
+    { top: "190%", left: "-10%" },
+    { top: "230%", left: "-10%" },
   ];
 
-  const initialPositions = isMobile
-    ? initialPositionsMobile
-    : initialPositionsDesktop;
+  const initialPositions =
+    isMobile || isTablet ? initialPositionsMobile : initialPositionsDesktop;
 
   const setIndex = (index: number) => {
     setActiveCard(index);
   };
 
   useEffect(() => {
-    checkIsMobile();
-    window.addEventListener("resize", checkIsMobile);
-    return () => window.removeEventListener("resize", checkIsMobile);
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
   }, []);
 
   return (
     <motion.div
-      className="flex h-[45rem] justify-center rounded-md p-10 pt-28 md:h-[50rem] lg:pr-[15rem]"
+      className="flex h-[45rem] justify-center rounded-md pt-16 md:h-[50rem] md:pt-28 lg:justify-start lg:pr-[15rem]"
       ref={ref}
     >
       <div
@@ -65,31 +66,31 @@ export const StickyScroll = ({
           style={{
             position: "absolute",
             zIndex: -1,
+            width: isMobile ? "300px" : isTablet ? "400px" : "600px",
           }}
         >
-          <Image src="/circle.svg" alt="" width={500} height={500} />
+          <Image src="/circle.svg" alt="" width={800} height={800} />
         </motion.div>
         {content.map((item, index) => (
           <motion.div
             key={index}
             initial={{
-              opacity: 0,
+              opacity: activeCard ? 1 : 0,
               scale: 0.3,
               x: 0,
             }}
             animate={{
               opacity: activeCard === index ? 1 : 0,
-              scale: activeCard === index ? 1 : 0.5,
+              scale: 1,
               x: activeCard === index ? 0 : -200,
             }}
             transition={{ duration: 0.3 }}
             style={{
               position: activeCard === index ? "relative" : "absolute",
-              top: isMobile ? -180 : -70,
-              left: isMobile ? 0 : 40,
-              width: isMobile ? "100%" : "80%",
-              height: isMobile ? "100%" : "80%",
-              zIndex: activeCard === index ? 10 : 10,
+              top: isMobile || isTablet ? 0 : -30,
+              left: isMobile || isTablet ? -50 : 60,
+              width: isMobile || isTablet ? "60%" : "90%",
+              height: isMobile || isTablet ? "60%" : "90%",
             }}
           >
             {item.content}
@@ -112,10 +113,11 @@ export const StickyScroll = ({
             <motion.div
               className="absolute"
               style={{
-                width: "60px",
-                height: "60px",
+                width: "80px",
+                height: "80px",
                 opacity: isActive ? 1 : 0.5,
                 transform: "translate(-50%, -50%)",
+                zIndex: 20,
               }}
               initial={{
                 top: initialPositions[index].top,
@@ -127,11 +129,11 @@ export const StickyScroll = ({
             >
               <motion.button
                 key={index}
-                className={`z-10 rounded-full bg-primary p-2 text-white ${isActive ? "active-neon-button" : ""}`}
+                className={`z-10 flex items-center justify-center rounded-full bg-primary p-0 text-white ${isActive ? "active-neon-button" : ""}`}
                 onClick={() => setIndex(index)}
                 style={{
-                  width: "60px",
-                  height: "60px",
+                  width: "80px",
+                  height: "80px",
                   border: isActive ? "2px solid white" : "none",
                 }}
                 whileHover={{ scale: 1.1 }}
@@ -143,8 +145,8 @@ export const StickyScroll = ({
               >
                 <Image
                   alt={`Button ${index + 1}`}
-                  width={50}
-                  height={50}
+                  width={60}
+                  height={60}
                   src={buttonImages[index]}
                   className="rounded-full"
                 />
@@ -154,7 +156,7 @@ export const StickyScroll = ({
                   className="absolute"
                   style={{
                     top: -18,
-                    left: 70,
+                    left: 100,
                     width: "200px",
                   }}
                 >

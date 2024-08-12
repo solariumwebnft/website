@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useRef, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 type Card = {
   id: number;
@@ -25,7 +26,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    <div className="relative mx-auto grid h-full w-full max-w-7xl grid-cols-1 gap-4 p-10 md:grid-cols-3">
+    <div className="relative mx-auto grid h-full w-full max-w-[1110px] grid-cols-1 gap-4 p-10 md:grid-cols-3">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
           <motion.div
@@ -34,14 +35,14 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               card.className,
               "relative overflow-hidden",
               selected?.id === card.id
-                ? "w-lg absolute inset-0 z-50 m-auto flex h-auto max-h-[800px] w-auto max-w-[800px] cursor-pointer flex-col flex-wrap items-center justify-center rounded-lg"
-                : "h-full w-full rounded-md",
+                ? "absolute inset-0 z-50 m-auto flex h-1/2 w-full cursor-pointer flex-col flex-wrap items-center justify-center rounded-lg md:w-1/2"
+                : lastSelected?.id === card.id
+                  ? "z-40 h-full w-full rounded-xl"
+                  : "h-full w-full rounded-xl",
             )}
             layoutId={`card-${card.id}`}
           >
-            {selected?.id === card.id && card.id != 2 && (
-              <SelectedCard selected={selected} />
-            )}
+            {selected?.id === card.id && <SelectedCard selected={selected} />}
             <ImageComponent card={card} />
           </motion.div>
         </div>
@@ -49,7 +50,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
       <motion.div
         onClick={handleOutsideClick}
         className={cn(
-          "absolute left-0 top-0 z-50 h-full w-full bg-black opacity-0",
+          "absolute left-0 top-0 z-10 h-full w-full bg-black opacity-0",
           selected?.id ? "pointer-events-auto" : "pointer-events-none",
         )}
         animate={{ opacity: selected?.id ? 0.3 : 0 }}

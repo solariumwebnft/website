@@ -1,16 +1,17 @@
 import React, { useRef } from "react";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
-import Image from "next/image";
 import { StickyScroll } from "../ui/sticky-scroll-reveal";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import Scene from "../3Dmodels/Scene";
+import Base from "../3Dmodels/Base";
+import CharacterScene from "../3Dmodels/CharacterScene";
 
 const Features = () => {
   const ref = useRef<any>(null);
 
-  const isInView = useInView(ref, { margin: "-500px" });
   const content = [
     {
-      title: <TextGenerateEffect words={`PIKACHU`} activeCard={0} index={0} />,
+      title: <TextGenerateEffect words={`PIKACHU`} activeCard={1} index={1} />,
       description: (
         <motion.div
           className="py-3 text-xl"
@@ -22,18 +23,14 @@ const Features = () => {
         </motion.div>
       ),
       content: (
-        <Image
-          src="/pokemon-1.svg"
-          width={400}
-          height={400}
-          className="svg-image h-[100%] md:h-[90%]"
-          alt="linear board demo"
-        />
+        <div className="relative bottom-20 left-12 right-0 h-[150%] w-[300px] md:left-0 md:right-12 md:w-[480px]">
+          <Base />
+        </div>
       ),
     },
     {
       title: (
-        <TextGenerateEffect words={`BUMBAZAURU `} activeCard={1} index={1} />
+        <TextGenerateEffect words={`BUMBAZAURU `} activeCard={0} index={0} />
       ),
       description: (
         <motion.div
@@ -46,13 +43,9 @@ const Features = () => {
         </motion.div>
       ),
       content: (
-        <Image
-          src="/pokemon-2.svg"
-          width={400}
-          height={400}
-          className="svg-image h-[100%] md:h-[90%]"
-          alt="linear board demo"
-        />
+        <div className="relative bottom-10 left-12 h-[200%] w-[300px] md:bottom-0 md:w-[400px]">
+          <Scene />
+        </div>
       ),
     },
     {
@@ -68,19 +61,15 @@ const Features = () => {
         </motion.div>
       ),
       content: (
-        <Image
-          src="/pokemon-3.svg"
-          width={400}
-          height={400}
-          className="svg-image h-[100%] md:h-[90%]"
-          alt="linear board demo"
-        />
+        <div className="relative bottom-10 left-10 h-[200%] w-[300px] md:bottom-0 md:w-[400px]">
+          <CharacterScene />
+        </div>
       ),
     },
   ];
-  const buttonImages = ["/pokemon-1.svg", "/pokemon-2.svg", "/pokemon-3.svg"];
+  const buttonImages = ["/base.svg", "/pokemon-4.svg", "/character.svg"];
   return (
-    <main className="h-full w-full justify-center px-8 text-white">
+    <main className="h-full w-full justify-center px-12 py-48 text-white lg:px-32">
       <div className="flex justify-center text-center text-4xl">
         logo Solarium
       </div>
@@ -89,11 +78,7 @@ const Features = () => {
         ornare, iaculis dui non, rhoncus leo. Duis ut neque mi. Proin a
         convallis ipsum
       </div>
-      <motion.div
-        ref={ref}
-        // animate={isInView ? { opacity: 1, x: -50 } : { opacity: 0, x: 0 }}
-        // transition={{ duration: 0.5 }}
-      >
+      <motion.div ref={ref}>
         <StickyScroll content={content} buttonImages={buttonImages} />
       </motion.div>
     </main>
