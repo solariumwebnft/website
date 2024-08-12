@@ -13,37 +13,17 @@ import { EffectCards } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
-import image from "../../assets/images/murangu.webp";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
+import { SliderContentData } from "@/data/SliderCardContent";
 
 register();
-
-interface CardProps {
-  src: StaticImageData;
-  title: string;
-  price?: number;
-}
-
-const cardContent: CardProps[] = [
-  { src: image, title: "titulo" },
-  { src: image, title: "titulo" },
-  { src: image, title: "titulo" },
-  { src: image, title: "titulo" },
-  { src: image, title: "titulo" },
-  { src: image, title: "titulo" },
-  { src: image, title: "titulo" },
-  { src: image, title: "titulo" },
-  { src: image, title: "titulo" },
-  { src: image, title: "titulo" },
-  { src: image, title: "titulo" },
-  { src: image, title: "titulo" },
-  { src: image, title: "titulo" },
-];
 
 export const Slider = () => {
   const swiperElRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
+
+  const { cardContent } = SliderContentData();
 
   const handleSlideClick = (index: number) => {
     if (swiperInstance) {
@@ -142,16 +122,6 @@ export const Slider = () => {
               </SwiperSlide>
             ))
           : null}
-
-        <div className="slider-controler flex justify-between py-4">
-          {/* <div className="swiper-button-prev slider-arrow ">
-            <ChevronLeftIcon className="h-6 w-6 text-white" />
-          </div>
-          <div className="swiper-button-next slider-arrow">
-            <ChevronRightIcon className="h-6 w-6 text-white" />
-          </div>
-          <div className="swiper-pagination " /> */}
-        </div>
       </Swiper>
     </div>
   );

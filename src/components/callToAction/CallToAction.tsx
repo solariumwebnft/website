@@ -10,8 +10,10 @@ import { EffectCoverflow, EffectFade } from "swiper/modules";
 import { Button } from "../ui/button";
 import { SwiperSection } from "./SwiperSection";
 import { ParticlesCore } from "../ui/particles";
+import { CallToActionData } from "@/data/CallToActionData";
 
 export const CallToAction = () => {
+  const { primaryButton, secundaryButton, title } = CallToActionData();
   return (
     <main className="p-8">
       <section className="relative z-20 my-28 flex max-h-[268px] max-w-[1030px] flex-col justify-between overflow-hidden rounded-3xl bg-primary md:flex-row lg:mx-auto">
@@ -22,21 +24,21 @@ export const CallToAction = () => {
             minSize={0.6}
             maxSize={1.4}
             particleDensity={100}
-            className="absolute inset-0 h-full w-full" // Updated this line
+            className="absolute inset-0 h-full w-full"
             particleColor="#FFFFFF"
           />
         </div>
 
         <div className="flex flex-col justify-between p-[30px] text-white md:p-[50px]">
           <h2 className="mb-4 text-2xl font-semibold md:max-w-[60%] md:text-3xl lg:max-w-[100%] lg:text-4xl">
-            Discover, create and sell your own NFT
+            {title}
           </h2>
           <div className="flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0">
             <Button className="button-glass" variant="white">
-              Explore Now
+              {primaryButton}
             </Button>
             <Button className="button-glass" variant="ghostLink">
-              Create Your First NFT
+              {secundaryButton}
             </Button>
           </div>
         </div>

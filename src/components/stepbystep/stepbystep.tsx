@@ -1,12 +1,12 @@
 import Image from "next/image";
-import ArrowIcon from "../../assets/stepbystep/ArrowIcon";
-import { steps } from "@/lib/steps";
+import { steps } from "@/data/steps";
+import ArrowIcon from "../../../assets/stepbystep/ArrowIcon";
 
 export const Stepbystep = () => {
   return (
     <div className="relative -bottom-[25%] -top-[50%]">
       <div
-        className="absolute inset-0 -bottom-[25%] -top-[50%] z-[10]"
+        className="absolute inset-0 -bottom-[25%] -top-[45%] z-[10]"
         style={{
           background: `
             url('/background1.svg') center/cover no-repeat`,
