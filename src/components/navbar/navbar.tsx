@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import { Button } from "./ui/button";
 import { FaWallet } from "react-icons/fa";
 import Image from "next/image";
+import { Button } from "../ui/button";
 
 export const Navbar: React.FC = () => {
   const menuItems = [

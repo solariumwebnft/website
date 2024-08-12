@@ -1,15 +1,15 @@
 import { HeroContent } from "@/data/heroData";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { GoArrowUpRight } from "react-icons/go";
 
 export const Hero = () => {
-  const { title, subTitle } = HeroContent();
+  const { title, subTitle, src } = HeroContent();
   return (
     <div className="relative flex min-h-[82vh] w-[100%] justify-center bg-background px-8">
       <div className="flex justify-center px-8 py-2 text-white">
         <div className="absolute flex h-full w-full justify-center overflow-hidden rounded-lg">
           <video
-            src="https://www.w3schools.com/html/mov_bbb.mp4"
+            src={src}
             autoPlay
             loop
             muted

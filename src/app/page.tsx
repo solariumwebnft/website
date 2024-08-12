@@ -1,13 +1,11 @@
 "use client";
 import { CallToAction } from "@/components/callToAction/CallToAction";
 import Features from "@/components/features/Features";
-import { Footer } from "@/components/footer";
-import { Hero } from "@/components/hero";
+import { Footer } from "@/components/footer/footer";
 import { GridLayoutMedia } from "@/components/layoutMedia/GridLayoutMedia";
-import { Navbar } from "@/components/navbar";
+
 import { NFTComponent } from "@/components/NTF/NFTComponent";
-import { Slider } from "@/components/slider";
-import { Stepbystep } from "@/components/stepbystep";
+
 import { SparklesCore } from "@/components/ui/sparkles";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -18,6 +16,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import dynamic from "next/dynamic";
+import { Hero } from "@/components/hero/hero";
+import { Navbar } from "@/components/navbar/navbar";
+import { Slider } from "@/components/slider/slider";
+import { Stepbystep } from "@/components/stepbystep/stepbystep";
 
 const Scene = dynamic(() => import("@/components/3Dmodels/Scene"), {
   ssr: false,
