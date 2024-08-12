@@ -43,6 +43,13 @@ const Scene = dynamic(() => import("@/components/3Dmodels/Scene"), {
  * @todo [done] fix the width of call to action component (PAY ATTENTION TO THE RESPONSIVE)
  * @todo [] add background to sessions
  * @todo SEO
+ * @todo icone da tab do navegador
+ * @todo metadados
+ * @todo [done] titulo do site
+ * @todo descricao do site
+ * @todo [done] site map
+ * @todo robots.txt
+ * @todo open graph
  */
 
 export default function Home() {
