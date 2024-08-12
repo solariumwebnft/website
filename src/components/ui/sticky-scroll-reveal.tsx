@@ -117,6 +117,7 @@ export const StickyScroll = ({
                 height: "80px",
                 opacity: isActive ? 1 : 0.5,
                 transform: "translate(-50%, -50%)",
+                zIndex: 20,
               }}
               initial={{
                 top: initialPositions[index].top,
