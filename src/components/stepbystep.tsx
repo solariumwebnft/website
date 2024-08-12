@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ArrowIcon from "../../assets/stepbystep/ArrowIcon";
-import { steps } from "@/lib/steps";
+import { steps } from "@/data/steps";
 
 export const Stepbystep = () => {
   return (

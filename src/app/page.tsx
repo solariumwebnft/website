@@ -54,6 +54,7 @@ export default function Home() {
 
   return (
     <main className="relative z-[0] m-0 flex h-full w-full flex-col items-center justify-between bg-background p-0">
+      {/* component */}
       <div className="absolute inset-0 z-[-10] h-full w-full">
         <SparklesCore
           id="tsparticlesfullpage2"
@@ -77,11 +78,12 @@ export default function Home() {
             className="px-4"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0 }}
+            transition={{ duration: 0.5, delay: 0, staggerChildren: 0.5 }}
           >
             <Navbar />
           </motion.div>
 
+          {/* component generico pra motion div com valores padroes */}
           <motion.div
             className="px-8"
             initial={{ opacity: 0, y: 50 }}
