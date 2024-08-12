@@ -1,0 +1,8 @@
+# Instrução: Quando o site estiver hospedado em um endereço final, substitua 'localhost:3000' pela URL real do site
+# Exemplo: https://solarium.com/sitemap.xml
+
+User-Agent: *
+Allow: /
+Disallow: /private/
+Sitemap: https://localhost:3000/sitemap.xml
+
