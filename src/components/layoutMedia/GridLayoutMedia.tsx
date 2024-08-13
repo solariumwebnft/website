@@ -1,107 +1,133 @@
 "use client";
-import React from "react";
-import { LayoutGrid } from "../ui/layout-grid";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import Image from "next/image";
+import { useState } from "react";
+import "swiper/css";
+import { Navigation, Pagination } from "swiper/modules";
 
-export function GridLayoutMedia() {
-  return (
-    <div className="flex h-screen flex-col items-center">
-      <div className="flex justify-between text-4xl font-bold text-white sm:px-8 md:px-8 lg:px-0">
-        <h1>Descobertas do mes</h1>
-      </div>
-      <LayoutGrid cards={cards} />
-    </div>
-  );
-}
+import image1 from "../../../assets/images/image.png";
+import image2 from "../../../assets/images/image1.png";
+import image3 from "../../../assets/images/image4.png";
+import image4 from "../../../assets/images/image3.png";
+import image5 from "../../../assets/images/image4.png";
+import image6 from "../../../assets/images/image5.png";
+import image7 from "../../../assets/images/image6.png";
+import image8 from "../../../assets/images/image7.png";
+import image9 from "../../../assets/images/image8.png";
+import image0 from "../../../assets/images/image9.png";
+import image11 from "../../../assets/images/image0.png";
+import image12 from "../../../assets/images/image11.png";
+import image13 from "../../../assets/images/image12.png";
+import image14 from "../../../assets/images/image13.png";
+import { Button } from "../ui/button";
 
-const SkeletonOne = () => {
-  return (
-    <div>
-      <p className="text-xl font-bold text-white md:text-4xl">
-        House in the woods
-      </p>
-      <p className="text-base font-normal text-white"></p>
-      <p className="my-4 max-w-lg text-base font-normal text-neutral-200">
-        A serene and tranquil retreat, this house in the woods offers a peaceful
-        escape from the hustle and bustle of city life.
-      </p>
-    </div>
-  );
-};
-
-const SkeletonTwo = () => {
-  return (
-    <div>
-      <p className="text-xl font-bold text-white md:text-4xl">
-        House above the clouds
-      </p>
-      <p className="text-base font-normal text-white"></p>
-      <p className="my-4 max-w-lg text-base font-normal text-neutral-200">
-        Perched high above the world, this house offers breathtaking views and a
-        unique living experience. It&apos;s a place where the sky meets home,
-        and tranquility is a way of life.
-      </p>
-    </div>
-  );
-};
-
-const SkeletonThree = () => {
-  return (
-    <div>
-      <p className="text-xl font-bold text-white md:text-4xl">
-        Greens all over
-      </p>
-
-      <p className="text-base font-normal text-white"></p>
-      <p className="my-4 max-w-lg text-base font-normal text-neutral-200">
-        A house surrounded by greenery and nature&apos;s beauty. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
-      </p>
-    </div>
-  );
-};
-
-const SkeletonFour = () => {
-  return (
-    <div>
-      <p className="text-xl font-bold text-white md:text-4xl">
-        Rivers are serene
-      </p>
-      <p className="text-base font-normal text-white"></p>
-      <p className="my-4 max-w-lg text-base font-normal text-neutral-200">
-        A house by the river is a place of peace and tranquility. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
-      </p>
-    </div>
-  );
-};
-
-const cards = [
-  {
-    id: 1,
-    content: <SkeletonOne />,
-    className: "md:col-span-2  ",
-    thumbnail:
-      "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 2,
-    content: <SkeletonTwo />,
-    className: "col-span-1  ",
-    thumbnail:
-      "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 3,
-    content: <SkeletonThree />,
-    className: "col-span-1   ",
-    thumbnail:
-      "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 4,
-    content: <SkeletonFour />,
-    className: "md:col-span-2 ",
-    thumbnail:
-      "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
+const images = [
+  image1,
+  image2,
+  image5,
+  image6,
+  image3,
+  image4,
+  image7,
+  image8,
+  image9,
+  image0,
+  image11,
+  image12,
+  image13,
+  image14,
 ];
+
+export const GridLayoutMedia = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [fadeIn, setFadeIn] = useState(true);
+
+  const changeImage = (index: number) => {
+    setFadeIn(false);
+    setTimeout(() => {
+      setCurrentIndex(index);
+      setFadeIn(true);
+    }, 300);
+  };
+
+  const handlePrevious = () => {
+    changeImage(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
+  };
+
+  const handleNext = () => {
+    changeImage(currentIndex === images.length - 1 ? 0 : currentIndex + 1);
+  };
+
+  return (
+    <div className="z-50 flex w-full flex-col items-center justify-center p-4">
+      <h1 className="pb-24 text-center text-4xl text-secondary md:text-start">
+        Top Collections in Week
+      </h1>
+      <div className="relative flex h-[calc(100vw*9/16)] w-full max-w-[1030px] items-center justify-center overflow-hidden rounded-lg text-white md:h-[579.38px]">
+        <Button
+          onClick={handlePrevious}
+          variant="preview"
+          className="absolute left-5 z-30 h-10 w-10 -translate-x-1/2 transform rounded-full bg-gray-800 text-white"
+        >
+          {"<"}
+        </Button>
+
+        <div
+          className={`relative z-20 h-full w-full rounded-lg transition-opacity duration-500 ${
+            fadeIn ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Image
+            src={images[currentIndex]}
+            alt="nft"
+            layout="fill"
+            className="scale-100 transform rounded-lg transition"
+          />
+        </div>
+
+        <Button
+          onClick={handleNext}
+          variant="preview"
+          className="absolute right-5 z-30 h-10 translate-x-1/2 transform rounded-full bg-gray-800 text-white"
+        >
+          {">"}
+        </Button>
+      </div>
+
+      <Swiper
+        modules={[Navigation, Pagination]}
+        spaceBetween={10}
+        slidesPerView={4}
+        loop={true}
+        autoplay={{ delay: 2000 }}
+        className="sm:space-between-[15px] md:space-between-[20px] mt-2 w-full max-w-[1030px]"
+        breakpoints={{
+          0: { slidesPerView: 2 },
+          640: { slidesPerView: 3 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+        }}
+      >
+        {images.map((image, index) => (
+          <SwiperSlide key={index} className="">
+            <Button
+              onClick={() => changeImage(index)}
+              className="relative h-[100px] w-[180px] overflow-hidden rounded-md bg-transparent md:h-[140.625px] md:w-[250px] md:p-0"
+              variant="preview"
+            >
+              <div className="h-full w-full p-0">
+                <Image
+                  src={image}
+                  fill
+                  alt={`nft-thumbnail-${index}`}
+                  className="rounded-lg object-cover"
+                />
+              </div>
+            </Button>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+};

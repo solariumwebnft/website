@@ -19,6 +19,8 @@ const buttonVariants = cva(
           "bg-transparent text-white min-h-[50px] min-w-[190px] px-4 py-2 rounded-md transition-colors hover:bg-primary/90 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/50",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        preview:
+          "bg-primary text-white px-4 py-2 rounded-md transition-colors hover:bg-transparent hover:cursor-pointer active:bg-transparent ",
 
         link: "text-primary ",
         ghostLink:
