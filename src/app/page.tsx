@@ -53,7 +53,9 @@ const Scene = dynamic(() => import("@/components/3Dmodels/Scene"), {
  * @todo [done] titulo do site
  * @todo descricao do site
  * @todo [done] site map
- * @todo robots.txt
+ * @todo [done] robots.txt
+ * @todo [done] privacy policy page
+ * @todo [done] terms of service page
  * @todo open graph
  */
 
