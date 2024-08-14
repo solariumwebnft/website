@@ -35,9 +35,9 @@ export const StickyScroll = ({
   ];
 
   const initialPositionsMobile = [
-    { top: "150%", left: "-10%" },
-    { top: "190%", left: "-10%" },
-    { top: "230%", left: "-10%" },
+    { top: "130%", left: "0%" },
+    { top: "170%", left: "0%" },
+    { top: "210%", left: "0%" },
   ];
 
   const initialPositions =
@@ -157,10 +157,10 @@ export const StickyScroll = ({
                   style={{
                     top: -18,
                     left: 100,
-                    width: "200px",
+                    width: isMobile ? "80px" : "200px",
                   }}
                 >
-                  <div className="min-w-[280px] md:max-w-[200px] lg:w-[400px]">
+                  <div className="min-w-[200px] md:max-w-[200px] lg:w-[400px]">
                     <div>{item.title}</div>
                     <motion.div
                       className="neon-glow"

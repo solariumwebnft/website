@@ -15,7 +15,7 @@ export const FeaturesData = () => {
       title: <TextGenerateEffect words={`PIKACHU`} activeCard={1} index={1} />,
       description: (
         <motion.div
-          className="py-3 text-xl"
+          className="py-3 text-sm"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -35,7 +35,7 @@ export const FeaturesData = () => {
       ),
       description: (
         <motion.div
-          className="py-3 text-xl"
+          className="py-3 text-sm"
           initial={{ opacity: 0, x: 70 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -44,7 +44,7 @@ export const FeaturesData = () => {
         </motion.div>
       ),
       content: (
-        <div className="md-[h-120%] sm:bottom-15 relative bottom-10 left-14 h-[150%] w-[300px] md:bottom-0 md:top-10 lg:left-12 lg:h-[180%] lg:w-[400px]">
+        <div className="md-[h-120%] sm:bottom-15 relative bottom-10 left-14 h-[150%] w-[300px] md:bottom-10 md:top-10 lg:left-12 lg:h-[180%] lg:w-[400px]">
           <Scene />
         </div>
       ),
@@ -53,7 +53,7 @@ export const FeaturesData = () => {
       title: <TextGenerateEffect words={`COMEDIAH`} activeCard={2} index={2} />,
       description: (
         <motion.div
-          className="py-3 text-xl"
+          className="py-3 text-sm"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
