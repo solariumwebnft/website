@@ -54,9 +54,9 @@ const Scene = dynamic(() => import("@/components/3Dmodels/Scene"), {
  * @todo descricao do site
  * @todo [done] site map
  * @todo [done] robots.txt
+ * @todo open graph
  * @todo [done] privacy policy page
  * @todo [done] terms of service page
- * @todo open graph
  */
 
 export default function Home() {

@@ -47,7 +47,8 @@ export const Footer = () => {
       <div className="mt-8 border-t border-gray-700 pt-4 text-center text-gray-400">
         <p>© 2024 Solarium - Made By MIDNIGHT</p>
         <p>
-          <a>Privacy Policy</a> | <a>Terms of Service</a>
+          <Link href="/privacy-policy">Privacy Policy</Link> |{" "}
+          <Link href="/terms-of-service">Terms of Service</Link>
         </p>
       </div>
     </footer>
