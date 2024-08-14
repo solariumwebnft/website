@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="flex flex-col items-center">
         <div className="flex flex-col justify-center md:flex-row">
           <FooterLogo />
-          <div className="flex max-w-[1110px] flex-wrap justify-center gap-6">
+          <div className="flex max-w-[1110px] flex-wrap justify-center gap-6 pl-8 md:pl-0">
             {footerData.map((section, index) => (
               <div
                 key={index}
@@ -45,10 +45,12 @@ export const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="flex w-full max-w-[1110px] flex-col items-center pt-10 text-center text-gray-400">
+        <div className="flex w-full max-w-[1110px] flex-col items-center px-5 pt-10 text-center text-gray-400 xl:px-0">
           <hr className="w-full border-gray-700 pt-6" />
-          <div className="flex w-full justify-between">
-            <p>© 2024 Solarium - Made By Factree</p>
+          <div className="flex w-full flex-col justify-between gap-4 md:flex-row">
+            <div className="flex">
+              <p>© 2024 Solarium - Made By Factree</p>
+            </div>
             <div className="flex gap-10">
               <Link href="/privacy-policy">Privacy Policy</Link>
               <Link href="/terms-of-service">Terms of Service</Link>
