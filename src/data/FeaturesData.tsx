@@ -6,9 +6,9 @@ import CharacterScene from "../components/3Dmodels/CharacterScene";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 export const FeaturesData = () => {
-  const title = "logo Solarium";
+  const title = "What is Solarium?";
   const subtitle =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu metus";
+    " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu metus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu metus";
 
   const content = [
     {
@@ -69,7 +69,7 @@ export const FeaturesData = () => {
     },
   ];
 
-  const buttonImages = ["/base.svg", "/pokemon-4.svg", "/character.svg"];
+  const buttonImages = ["/base.svg", "/cristal.svg", "/character.svg"];
 
   return { content, buttonImages, title, subtitle };
 };

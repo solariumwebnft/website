@@ -30,7 +30,7 @@ export const StickyScroll = ({
 
   const initialPositionsDesktop = [
     { top: "-10%", left: "200%" },
-    { top: "95%", left: "240%" },
+    { top: "85%", left: "240%" },
     { top: "180%", left: "200%" },
   ];
 
@@ -145,8 +145,8 @@ export const StickyScroll = ({
               >
                 <Image
                   alt={`Button ${index + 1}`}
-                  width={60}
-                  height={60}
+                  width={isMobile ? 50 : 70}
+                  height={isMobile ? 50 : 70}
                   src={buttonImages[index]}
                   className="rounded-full"
                 />
