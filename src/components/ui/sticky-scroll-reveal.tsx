@@ -24,8 +24,8 @@ export const StickyScroll = ({
 
   const checkDevice = () => {
     const width = window.innerWidth;
-    setIsMobile(width <= 768);
-    setIsTablet(width > 768 && width <= 1024);
+    setIsMobile(width <= 868);
+    setIsTablet(width > 868 && width <= 1124);
   };
 
   const initialPositionsDesktop = [
@@ -66,7 +66,7 @@ export const StickyScroll = ({
           style={{
             position: "absolute",
             zIndex: -1,
-            width: isMobile ? "300px" : isTablet ? "400px" : "600px",
+            width: isMobile ? "300px" : isTablet ? "300px" : "600px",
           }}
         >
           <Image src="/circle.svg" alt="" width={800} height={800} />

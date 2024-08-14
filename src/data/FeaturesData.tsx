@@ -24,7 +24,7 @@ export const FeaturesData = () => {
         </motion.div>
       ),
       content: (
-        <div className="relative bottom-20 left-12 right-0 h-[150%] w-[300px] md:left-0 md:right-12 md:w-[480px]">
+        <div className="relative bottom-[4rem] left-14 h-[150%] w-[300px] md:h-[190%] lg:left-10 lg:w-[400px]">
           <Base />
         </div>
       ),
@@ -44,7 +44,7 @@ export const FeaturesData = () => {
         </motion.div>
       ),
       content: (
-        <div className="relative bottom-10 left-12 h-[200%] w-[300px] md:bottom-0 md:w-[400px]">
+        <div className="md-[h-120%] sm:bottom-15 relative bottom-10 left-14 h-[150%] w-[300px] md:bottom-0 md:top-10 lg:left-12 lg:h-[180%] lg:w-[400px]">
           <Scene />
         </div>
       ),
@@ -62,7 +62,7 @@ export const FeaturesData = () => {
         </motion.div>
       ),
       content: (
-        <div className="relative bottom-10 left-10 h-[200%] w-[300px] md:bottom-0 md:w-[400px]">
+        <div className="md-[h-120%] relative bottom-0 left-14 h-[120%] w-[300px] md:bottom-0 md:left-14 md:top-10 lg:bottom-10 lg:left-10 lg:h-[170%] lg:w-[400px]">
           <CharacterScene />
         </div>
       ),
