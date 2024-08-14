@@ -24,20 +24,20 @@ export const StickyScroll = ({
 
   const checkDevice = () => {
     const width = window.innerWidth;
-    setIsMobile(width <= 768);
-    setIsTablet(width > 768 && width <= 1024);
+    setIsMobile(width <= 868);
+    setIsTablet(width > 868 && width <= 1124);
   };
 
   const initialPositionsDesktop = [
     { top: "-10%", left: "200%" },
-    { top: "95%", left: "240%" },
+    { top: "85%", left: "240%" },
     { top: "180%", left: "200%" },
   ];
 
   const initialPositionsMobile = [
-    { top: "150%", left: "-10%" },
-    { top: "190%", left: "-10%" },
-    { top: "230%", left: "-10%" },
+    { top: "130%", left: "0%" },
+    { top: "170%", left: "0%" },
+    { top: "210%", left: "0%" },
   ];
 
   const initialPositions =
@@ -66,7 +66,7 @@ export const StickyScroll = ({
           style={{
             position: "absolute",
             zIndex: -1,
-            width: isMobile ? "300px" : isTablet ? "400px" : "600px",
+            width: isMobile ? "300px" : isTablet ? "300px" : "600px",
           }}
         >
           <Image src="/circle.svg" alt="" width={800} height={800} />
@@ -145,8 +145,8 @@ export const StickyScroll = ({
               >
                 <Image
                   alt={`Button ${index + 1}`}
-                  width={60}
-                  height={60}
+                  width={isMobile ? 50 : 70}
+                  height={isMobile ? 50 : 70}
                   src={buttonImages[index]}
                   className="rounded-full"
                 />
@@ -157,10 +157,10 @@ export const StickyScroll = ({
                   style={{
                     top: -18,
                     left: 100,
-                    width: "200px",
+                    width: isMobile ? "80px" : "200px",
                   }}
                 >
-                  <div className="min-w-[280px] md:max-w-[200px] lg:w-[400px]">
+                  <div className="min-w-[200px] md:max-w-[200px] lg:w-[400px]">
                     <div>{item.title}</div>
                     <motion.div
                       className="neon-glow"
