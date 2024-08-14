@@ -1,5 +1,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { SlArrowUp } from "react-icons/sl";
+import { SlArrowDown } from "react-icons/sl";
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {}
@@ -36,7 +38,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               }
             }}
           >
-            ▲
+            <SlArrowUp />
           </button>
           <button
             type="button"
@@ -52,7 +54,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               }
             }}
           >
-            ▼
+            <SlArrowDown />
           </button>
         </div>
       </div>
