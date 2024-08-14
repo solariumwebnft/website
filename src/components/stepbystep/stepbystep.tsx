@@ -6,11 +6,11 @@ export const Stepbystep = () => {
   return (
     <div className="relative -bottom-[25%] -top-[50%]">
       <div
-        className="absolute inset-0 -bottom-[25%] -top-[45%] z-[10]"
+        className="absolute inset-0 -bottom-[25%] -top-[45%] z-[10] hidden md:block"
         style={{
           background: `
-            url('/background1.svg') center/cover no-repeat`,
-          backgroundSize: "cover",
+          url('/background1.svg') center/cover no-repeat`,
+          backgroundSize: "none md:cover",
           backgroundPosition: "center",
           minHeight: "90vh",
         }}

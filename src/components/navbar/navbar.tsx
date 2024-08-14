@@ -8,11 +8,6 @@ export const Navbar: React.FC = () => {
   const menuItems = [
     { label: "Connect to wallet", icon: <FaWallet />, key: "wallet1" },
   ];
-  const link = [
-    { label: "session 1 ", key: "wallet1" },
-    { label: "session 2 ", key: "wallet2" },
-    { label: "session 3 ", key: "wallet3" },
-  ];
 
   const [isLinksVisible, setIsLinksVisible] = useState<boolean>(false);
 
@@ -21,7 +16,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="top-0 z-10 w-full bg-background p-0 md:bg-transparent">
+    <nav className="relative top-0 z-[100] w-full bg-background">
       <div className="mx-auto flex max-w-[100vw] items-center justify-between bg-background p-4">
         <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image
@@ -61,27 +56,14 @@ export const Navbar: React.FC = () => {
           </Button>
         </div>
 
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+        <div
+          className="hidden w-full bg-background md:block md:w-auto"
+          id="navbar-default"
+        >
           <ul className="height-100% flex gap-6 align-middle">
-            {link.map((item) => (
-              <li key={item.key} className="h-100% flex">
-                <Button
-                  style={{
-                    alignItems: "center",
-                    display: "flex",
-                    minHeight: "100%",
-                    position: "relative",
-                  }}
-                  variant="link"
-                  className="hover:underline-effect z-10 text-white"
-                >
-                  <span className="hover-underline">{item.label}</span>
-                </Button>
-              </li>
-            ))}
             {menuItems.map((item) => (
               <li key={item.key}>
-                <Button className="button-glass z-10 max-w-[44px] justify-between p-2 px-4 text-white transition-colors duration-300">
+                <Button className="button-glass z-[101] max-w-[44px] justify-between p-2 px-4 text-white transition-colors duration-300">
                   {item.label} {item.icon}
                 </Button>
               </li>
@@ -91,25 +73,9 @@ export const Navbar: React.FC = () => {
       </div>
 
       <div
-        className={` ${isLinksVisible ? "" : "hidden"} transform transition-all duration-300 ease-in-out md:hidden`}
+        className={` ${isLinksVisible ? "" : "hidden"} z-30 transform transition-all duration-300 ease-in-out md:hidden`}
       >
-        <ul className="absolute flex w-full flex-col gap-4 bg-gray-500 p-6">
-          {link.map((item) => (
-            <li key={item.key}>
-              <Button
-                variant="link"
-                style={{
-                  alignItems: "center",
-                  display: "flex",
-                  minWidth: "100%",
-                  position: "relative",
-                }}
-                className="hover:underline-effect z-10 p-6 text-white"
-              >
-                <span className="hover-underline">{item.label}</span>
-              </Button>
-            </li>
-          ))}
+        <ul className="absolute z-[50] flex w-full flex-col gap-4 bg-background p-6">
           {menuItems.map((item) => (
             <li key={item.key} className="flex h-full">
               <Button
@@ -118,7 +84,7 @@ export const Navbar: React.FC = () => {
                   display: "flex",
                   minWidth: "100%",
                 }}
-                className="button-glass z-10 max-w-[44px] justify-center gap-2 p-2 px-4 text-white transition-colors duration-300"
+                className="button-glass z-[101] max-w-[44px] justify-center gap-2 p-2 px-4 text-white transition-colors duration-300"
               >
                 {item.label} {item.icon}
               </Button>
