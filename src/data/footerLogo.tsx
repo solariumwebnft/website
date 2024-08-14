@@ -2,8 +2,13 @@ import Image from "next/image";
 
 export const FooterLogo = () => {
   return (
-    <div className="px-12 py-5">
-      <Image src="/logo.svg" height={50} width={50} alt="Flowbite Logo" />
+    <div className="ml-6 mr-11 py-6">
+      <Image
+        src="/footer-logo.svg"
+        height={36}
+        width={228}
+        alt="Solarium Logo"
+      />
     </div>
   );
 };
