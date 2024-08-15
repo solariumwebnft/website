@@ -62,7 +62,7 @@ export const GridLayoutMedia = () => {
   };
 
   return (
-    <div className="z-50 flex w-full flex-col items-center justify-center p-4 pb-0 pt-20">
+    <div className="z-50 flex w-full flex-col items-center justify-center p-4 px-8 pb-0 pt-20">
       <h1 className="pb-[64px] text-center text-4xl text-secondary md:text-start">
         Top Collections in Week
       </h1>
