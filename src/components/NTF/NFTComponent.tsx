@@ -11,12 +11,17 @@ export function NFTComponent() {
     <main className="my-[6.4rem] mb-[10rem] flex w-full justify-center gap-8 px-8 lg:gap-40">
       <section className="flex flex-col justify-center md:max-w-[700px]">
         <div className="space-y-6 text-white">
-          <h1 className="font-bold md:text-[30px] lg:text-[54px]">{title}</h1>
-          <h2 className="font-thin">{subTitle}</h2>
+          <h1 className="font-barlow text-h2 md:text-[2.1875rem] lg:text-[3.375rem]">
+            {title}
+          </h1>
+          <h2 className="font-roboto-mono text-p16">{subTitle}</h2>
           <div className="space-y-2">
             {checks.map((check) => {
               return (
-                <p key={check} className="flex items-center gap-2">
+                <p
+                  key={check}
+                  className="font-barlow text-p16 flex items-center gap-2"
+                >
                   <div className="text-primary">
                     <FaCheck />
                   </div>
@@ -26,7 +31,9 @@ export function NFTComponent() {
             })}
           </div>
         </div>
-        <Button className="button-glass mt-8 max-w-fit">{button}</Button>
+        <Button className="font-barlow button-glass mt-8 max-w-fit font-bold">
+          {button}
+        </Button>
       </section>
       <NFTCard />
     </main>

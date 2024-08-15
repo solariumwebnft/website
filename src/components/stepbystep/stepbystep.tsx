@@ -18,8 +18,8 @@ export const Stepbystep = () => {
       <div className="absolute inset-0 -bottom-[25%] -top-[50%] z-[-10] bg-background"></div>
       <div className="container relative z-10 max-w-[1110px] py-10 pb-[17rem] pt-[9rem]">
         <div aria-label="title" className="pb-10">
-          <h1 className="text-center text-5xl font-medium text-white">
-            Step by Step
+          <h1 className="font-barlow text-h3 text-center text-white md:text-[1.875rem] lg:text-[2.8125rem]">
+            Step by step Create and Sell Your NFTs
           </h1>
         </div>
 
@@ -45,9 +45,15 @@ export const Stepbystep = () => {
               </div>
 
               <div className="flex max-w-[240px] flex-col gap-4 text-center">
-                <p className="text-gray-500">{step.number.toUpperCase()}</p>
-                <h2 className="text-xl font-medium text-white">{step.title}</h2>
-                <p className="text-gray-500">{step.description}</p>
+                <p className="font-roboto-mono text-p14 text-white">
+                  {step.number.toUpperCase()}
+                </p>
+                <h2 className="font-barlow text-h6 text-white md:text-[1rem] lg:text-[1.25rem]">
+                  {step.title}
+                </h2>
+                <p className="font-roboto-mono text-p16 text-white">
+                  {step.description}
+                </p>
               </div>
 
               {index < steps.length - 1 && (

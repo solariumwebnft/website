@@ -21,6 +21,23 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        barlow: ["Barlow", "sans-serif"],
+        "roboto-mono": ["Roboto Mono", "monospace"],
+      },
+      fontSize: {
+        h1: ["2.5rem", { lineHeight: "1.2", fontWeight: "800" }], // 40px, Extra Bold (Mobile)
+        h2: ["2.1875rem", { lineHeight: "1.2", fontWeight: "800" }], // 35px, Extra Bold (Mobile)
+        h3: ["1.875rem", { lineHeight: "1.2", fontWeight: "800" }], // 30px, Extra Bold (Mobile)
+        h4: ["1.75rem", { lineHeight: "1.2", fontWeight: "800" }], // 28px, Extra Bold (Mobile)
+        h5: ["1.5rem", { lineHeight: "1.2", fontWeight: "700" }], // 24px, Bold (Mobile)
+        h6: ["1.25rem", { lineHeight: "1.2", fontWeight: "700" }], // 20px, Bold (Mobile)
+        h7: ["1rem", { lineHeight: "1.2", fontWeight: "800" }], // 16px, Extra Bold (Mobile)
+        p16: ["1rem", { lineHeight: "1.5", fontWeight: "400" }], // 16px, Regular (Mobile)
+        p14: ["0.875rem", { lineHeight: "1.5", fontWeight: "400" }], // 14px, Regular (Mobile)
+        p14bold: ["0.875rem", { lineHeight: "1.5", fontWeight: "700" }], // 14px, Bold (Mobile)
+      },
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

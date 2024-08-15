@@ -161,14 +161,16 @@ export const StickyScroll = ({
                   }}
                 >
                   <div className="min-w-[200px] md:max-w-[200px] lg:w-[400px]">
-                    <div>{item.title}</div>
+                    <div className="font-barlow text-h5 md:text-[1.25rem] lg:text-[1.75rem]">
+                      {item.title}
+                    </div>
                     <motion.div
                       className="neon-glow"
                       initial={{ width: 0 }}
                       animate={{ width: "100%" }}
                       transition={{ duration: 1 }}
                     />
-                    {item.description}
+                    <p className="font-barlow text-p16">{item.description}</p>
                   </div>
                 </div>
               )}

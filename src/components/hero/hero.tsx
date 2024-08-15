@@ -18,17 +18,17 @@ export const Hero = () => {
         </div>
 
         <div className="relative flex w-full flex-col justify-center gap-10 md:max-w-[700px]">
-          <h1 className="text-center text-4xl font-extrabold leading-normal md:text-6xl">
+          <h1 className="font-barlow text-h1 text-center leading-normal md:text-[2.8125rem] lg:text-[4rem]">
             {title}
           </h1>
-          <p className="text-center">{subTitle}</p>
+          <p className="font-roboto-mono text-p16 text-center">{subTitle}</p>
           <div className="flex flex-col justify-center gap-8 py-4 sm:flex-row">
-            <Button className="button-glass gap-2 font-extrabold">
+            <Button className="button-glass font-barlow gap-2 font-bold">
               Start Collecting <GoArrowUpRight size="23px" />
             </Button>
             <Button
               variant="ghostLink"
-              className="button-glass gap-2 font-extrabold"
+              className="button-glass font-barlow gap-2 font-bold"
             >
               Create NFT <GoArrowUpRight size="23px" />
             </Button>

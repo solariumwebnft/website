@@ -11,6 +11,7 @@ import { Button } from "../ui/button";
 import { SwiperSection } from "./SwiperSection";
 import { ParticlesCore } from "../ui/particles";
 import { CallToActionData } from "@/data/CallToActionData";
+import { GoArrowUpRight } from "react-icons/go";
 
 export const CallToAction = () => {
   const { primaryButton, secundaryButton, title } = CallToActionData();
@@ -30,15 +31,21 @@ export const CallToAction = () => {
         </div>
 
         <div className="flex flex-col justify-between p-[30px] text-white md:p-[50px]">
-          <h2 className="mb-4 text-2xl font-semibold md:max-w-[60%] md:text-3xl lg:max-w-[100%] lg:text-4xl">
+          <h2 className="font-barlow text-h4 mb-4 md:max-w-[60%] md:text-[1.5rem] lg:max-w-[100%] lg:text-[2rem]">
             {title}
           </h2>
           <div className="flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0">
-            <Button className="button-glass" variant="white">
-              {primaryButton}
+            <Button
+              className="font-barlow button-glass font-bold"
+              variant="white"
+            >
+              {primaryButton} <GoArrowUpRight size="23px" />
             </Button>
-            <Button className="button-glass" variant="ghostLink">
-              {secundaryButton}
+            <Button
+              className="font-barlow button-glass font-bold"
+              variant="ghostLink"
+            >
+              {secundaryButton} <GoArrowUpRight size="23px" />
             </Button>
           </div>
         </div>
