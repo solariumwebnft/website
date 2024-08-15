@@ -9,8 +9,10 @@ const Features = () => {
 
   return (
     <main className="h-full w-full justify-center px-12 py-48 text-white lg:px-32">
-      <div className="flex justify-center text-center text-4xl">{title}</div>
-      <div className="text-md flex justify-center text-center md:px-40">
+      <div className="font-barlow text-h3 flex justify-center text-center md:text-[1.875rem] lg:text-[2.8125rem]">
+        {title}
+      </div>
+      <div className="text-p16 font-barlow flex justify-center text-center md:px-40">
         {subtitle}
       </div>
       <motion.div ref={ref} className="xl:pl-32">
