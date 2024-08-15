@@ -2,7 +2,7 @@ import * as React from "react";
 import { FaHeart } from "react-icons/fa";
 import { GlareCard } from "../ui/glare-card";
 import Image from "next/image";
-import image from "../../../assets/images/murangu.webp";
+import image from "/public/NFTCard.webp";
 import { NFTCardData } from "@/data/NFTCardData";
 
 interface NFTCardProps {

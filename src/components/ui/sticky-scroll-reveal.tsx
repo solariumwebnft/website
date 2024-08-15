@@ -24,8 +24,8 @@ export const StickyScroll = ({
 
   const checkDevice = () => {
     const width = window.innerWidth;
-    setIsMobile(width <= 868);
-    setIsTablet(width > 868 && width <= 1124);
+    setIsMobile(width <= 768);
+    setIsTablet(width > 768 && width <= 1023);
   };
 
   const initialPositionsDesktop = [
@@ -42,6 +42,18 @@ export const StickyScroll = ({
 
   const initialPositions =
     isMobile || isTablet ? initialPositionsMobile : initialPositionsDesktop;
+
+  const getImageHeightSize = () => {
+    if (isMobile) {
+      return "80%";
+    } else if (isTablet) {
+      return "60%";
+    } else {
+      return "90%";
+    }
+  };
+
+  const imageHeight = getImageHeightSize();
 
   const setIndex = (index: number) => {
     setActiveCard(index);
@@ -90,7 +102,7 @@ export const StickyScroll = ({
               top: isMobile || isTablet ? 0 : -30,
               left: isMobile || isTablet ? -50 : 60,
               width: isMobile || isTablet ? "60%" : "90%",
-              height: isMobile || isTablet ? "60%" : "90%",
+              height: imageHeight,
             }}
           >
             {item.content}
