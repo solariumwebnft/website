@@ -67,10 +67,6 @@ export const Slider = () => {
         }}
         autoplay={{ delay: 5000 }}
         modules={[EffectCoverflow, Pagination, Navigation, EffectCards]}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
-        }}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -84,7 +80,7 @@ export const Slider = () => {
         observeParents={true}
         breakpoints={{
           0: {
-            slidesPerView: 1,
+            slidesPerView: 2,
           },
           480: { slidesPerView: 2 },
           640: {

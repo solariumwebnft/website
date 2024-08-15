@@ -1,16 +1,22 @@
-"use client";
-import React from "react";
+import * as React from "react";
 import { FaHeart } from "react-icons/fa";
 import { GlareCard } from "../ui/glare-card";
 import Image from "next/image";
 import image from "../../../assets/images/murangu.webp";
 import { NFTCardData } from "@/data/NFTCardData";
 
-const NFTCard = () => {
+interface NFTCardProps {
+  inputValue: number;
+}
+
+const NFTCard: React.FC<NFTCardProps> = ({ inputValue }) => {
   const { info, subtitle, title } = NFTCardData();
+
+  const multipliedInfo = info * inputValue;
+
   return (
-    <section className="hidden h-full justify-center md:relative md:flex">
-      <GlareCard className="relative mx-auto hidden flex-col items-center justify-center overflow-hidden rounded-lg bg-white shadow-lg md:flex">
+    <section className="relative h-full justify-center sm:flex">
+      <GlareCard className="relative mx-auto flex flex-col items-center justify-center overflow-hidden rounded-lg bg-white shadow-lg">
         <Image
           src={image}
           layout="fill"
@@ -34,7 +40,7 @@ const NFTCard = () => {
           </div>
           <div className="flex items-center space-x-2">
             <FaHeart className="text-pink-500" />
-            <p className="text-xs">{info}</p>
+            <p className="text-lg">{`$ ${multipliedInfo},00`}</p>
           </div>
         </div>
       </GlareCard>

@@ -15,7 +15,7 @@ const Features = () => {
       <div className="text-p16 font-barlow flex justify-center text-center md:px-40">
         {subtitle}
       </div>
-      <motion.div ref={ref}>
+      <motion.div ref={ref} className="xl:pl-32">
         <StickyScroll content={content} buttonImages={buttonImages} />
       </motion.div>
     </main>

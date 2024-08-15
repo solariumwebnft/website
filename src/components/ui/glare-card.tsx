@@ -67,7 +67,7 @@ export const GlareCard = ({
   return (
     <div
       style={containerStyle}
-      className="duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] base:h-[600px] relative isolate max-w-full transition-transform will-change-transform [aspect-ratio:17/21] [contain:layout_style] [perspective:600px] md:h-[450px] lg:h-[560px] lg:w-[500px]"
+      className="duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] base:h-[600px] relative isolate h-[450px] max-w-full transition-transform will-change-transform [aspect-ratio:17/21] [contain:layout_style] [perspective:600px] lg:h-[560px] lg:w-[500px]"
       ref={refElement}
       onPointerMove={(event) => {
         const rotateFactor = 0.4;
@@ -116,7 +116,7 @@ export const GlareCard = ({
         }
       }}
     >
-      <div className="duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] hidden h-full origin-center overflow-hidden rounded-[var(--radius)] border border-slate-800 transition-transform will-change-transform [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] hover:filter-none hover:[--duration:200ms] hover:[--easing:linear] hover:[--opacity:0.6] md:grid">
+      <div className="duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] grid h-full origin-center overflow-hidden rounded-[var(--radius)] border border-slate-800 transition-transform will-change-transform [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] hover:filter-none hover:[--duration:200ms] hover:[--easing:linear] hover:[--opacity:0.6]">
         <div className="grid h-full w-full mix-blend-soft-light [clip-path:inset(0_0_0_0_round_var(--radius))] [grid-area:1/1]">
           <div className={cn("h-full w-full bg-slate-950", className)}>
             {children}

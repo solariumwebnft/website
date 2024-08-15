@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useState } from "react";
 import "swiper/css";
 import { Navigation, Pagination } from "swiper/modules";
+import { SlArrowRight } from "react-icons/sl";
+import { SlArrowLeft } from "react-icons/sl";
 
 import image1 from "../../../assets/images/image.png";
 import image2 from "../../../assets/images/image1.png";
@@ -68,9 +70,9 @@ export const GridLayoutMedia = () => {
         <Button
           onClick={handlePrevious}
           variant="preview"
-          className="absolute left-5 z-30 h-10 w-10 -translate-x-1/2 transform rounded-full bg-gray-800 text-white"
+          className="absolute left-6 z-30 h-10 w-10 -translate-x-1/2 transform rounded-full bg-background text-secondary"
         >
-          {"<"}
+          <SlArrowLeft />
         </Button>
 
         <div
@@ -89,9 +91,9 @@ export const GridLayoutMedia = () => {
         <Button
           onClick={handleNext}
           variant="preview"
-          className="absolute right-5 z-30 h-10 translate-x-1/2 transform rounded-full bg-gray-800 text-white"
+          className="absolute right-6 z-30 h-10 w-10 translate-x-1/2 transform rounded-full bg-background text-secondary"
         >
-          {">"}
+          <SlArrowRight />
         </Button>
       </div>
 
