@@ -193,27 +193,27 @@
 @keyframes neonBorder {
   0% {
     box-shadow:
-      0 0 5px #0066b2,
-      0 0 15px #0066b2,
-      0 0 20px #0066b2,
-      0 0 40px #0066b2;
-    border-color: #0066b2;
+      0 0 5px #01e6ff,
+      0 0 10px #01e6ff,
+      0 0 15px #01e6ff,
+      0 0 20px #00ff9f;
+    border-color: #00ff9f;
   }
   50% {
     box-shadow:
-      0 0 10px #0066b2,
-      0 0 15px #0066b2,
-      0 0 30px #0066b2,
-      0 0 60px #0066b2;
-    border-color: #0066b2;
+      0 0 5px #01e6ff,
+      0 0 10px #01e6ff,
+      0 0 15px #01e6ff,
+      0 0 21px #00ff9f;
+    border-color: #00ff9f;
   }
   100% {
     box-shadow:
-      0 0 5px #0066b2,
-      0 0 11px #0066b2,
-      0 0 20px #0066b2,
-      0 0 50px #0066b2;
-    border-color: #0066b2;
+      0 0 5px #01e6ff,
+      0 0 10px #01e6ff,
+      0 0 15px #01e6ff,
+      0 0 22px #00ff9f;
+    border-color: #00ff9f;
   }
 }
 
@@ -236,14 +236,15 @@
   pointer-events: none;
   z-index: -1;
 }
+
 .neon-glow {
   position: relative;
-  background: linear-gradient(to right, rgb(2, 48, 89), #0969b3);
+  background: linear-gradient(to right, #00ff9f, #01e6ff);
   box-shadow:
-    0 0 5px #0969b3,
-    0 0 10px #0969b3,
-    0 0 15px #0969b3,
-    0 0 30px #0969b3;
+    0 0 5px #01e6ff,
+    0 0 10px #01e6ff,
+    0 0 15px #01e6ff,
+    0 0 30px #01e6ff;
   filter: brightness(1.2);
   border-radius: 4px;
   height: 4px;
@@ -258,10 +259,10 @@
   bottom: 0;
   border-radius: 4px;
   box-shadow:
-    0 0 10px #00f6ff,
-    0 0 20px #00f6ff,
-    0 0 40px #00f6ff,
-    0 0 80px #00f6ff;
+    0 0 10px #00ff9f,
+    0 0 20px #00ff9f,
+    0 0 40px #00ff9f,
+    0 0 80px #00ff9f;
   z-index: -1;
   opacity: 0.7;
   pointer-events: none;

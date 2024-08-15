@@ -9,7 +9,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/grid";
 import "swiper/css";
 
-import image from "../../../assets/images/murangu.webp";
+import image from "/public/NFTCard.webp";
 
 const images: StaticImageData[] = Array(11).fill(image);
 

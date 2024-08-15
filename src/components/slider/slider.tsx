@@ -96,15 +96,14 @@ export const Slider = () => {
               <SwiperSlide
                 onClick={() => handleSlideClick(index)}
                 key={index}
-                className="rounded-[20px] bg-card p-[10px] md:max-w-[500px] xl:max-w-[600px]"
+                className="max-h-[500px] min-h-[300px] rounded-[20px] bg-card p-[10px] md:min-h-[400px] md:max-w-[400px] lg:min-h-[500px] xl:max-w-[500px]"
               >
-                <div className="overflow-hidden rounded-xl hover:shadow-lg">
+                <div className="max-h-[800px] min-h-[300px] overflow-hidden rounded-xl bg-[#292929] hover:shadow-lg md:min-h-[435px]">
                   <Image
                     src={content.src}
                     alt={`Slide ${index + 1}`}
-                    className="z-10 scale-105 transform transition-transform duration-300 ease-in-out will-change-transform hover:scale-125"
-                    width={600}
-                    height={600}
+                    className="z-10 scale-100 transform pb-16 pt-4 transition-transform duration-300 ease-in-out will-change-transform hover:scale-105 md:pb-24 md:pt-8"
+                    fill
                   />
                 </div>
                 <div className="mb-2 mt-3">
