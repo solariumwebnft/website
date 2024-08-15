@@ -18,7 +18,7 @@ export const Stepbystep = () => {
       <div className="absolute inset-0 -bottom-[25%] -top-[50%] z-[-10] bg-background"></div>
       <div className="container relative z-10 max-w-[1110px] py-10 pb-[17rem] pt-[9rem]">
         <div aria-label="title" className="pb-10">
-          <h1 className="font-barlow text-h3 text-center text-white md:text-[1.875rem] lg:text-[2.8125rem]">
+          <h1 className="text-center font-barlow text-h3 text-white md:text-[1.875rem] lg:text-[2.8125rem]">
             Step by step Create and Sell Your NFTs
           </h1>
         </div>
@@ -33,7 +33,7 @@ export const Stepbystep = () => {
                 <div className="flex flex-col space-y-4 text-center">
                   <div
                     aria-label="card"
-                    className="card mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-lg bg-card"
+                    className="card mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-lg bg-card drop-shadow-xl"
                   >
                     <Image
                       src={step.icon}
