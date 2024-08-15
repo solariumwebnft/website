@@ -34,7 +34,7 @@ export const Slider = () => {
   };
 
   return (
-    <div className="container mx-0 max-w-[100vw] px-0">
+    <div className="container mx-0 max-w-[100vw] px-0 py-[176px] pb-[200px]">
       <Swiper
         ref={swiperElRef}
         onSwiper={setSwiperInstance}

@@ -8,7 +8,7 @@ const Features = () => {
   const { content, buttonImages, title, subtitle } = FeaturesData();
 
   return (
-    <main className="h-full w-full justify-center px-12 py-48 text-white lg:px-32">
+    <main className="h-full w-full justify-center px-12 pb-48 text-white lg:px-32">
       <div className="flex justify-center text-center text-4xl">{title}</div>
       <div className="text-md flex justify-center text-center md:px-40">
         {subtitle}

@@ -15,8 +15,8 @@ import { CallToActionData } from "@/data/CallToActionData";
 export const CallToAction = () => {
   const { primaryButton, secundaryButton, title } = CallToActionData();
   return (
-    <main className="p-8">
-      <section className="relative z-20 my-28 flex max-h-[268px] max-w-[1030px] flex-col justify-between overflow-hidden rounded-3xl bg-primary md:flex-row lg:mx-auto">
+    <main className="px-8 py-[176px]">
+      <section className="relative z-20 flex max-h-[268px] max-w-[1030px] flex-col justify-between overflow-hidden rounded-3xl bg-primary md:flex-row lg:mx-auto">
         <div className="absolute inset-0 h-full w-full">
           <ParticlesCore
             id="tsparticlesfullpage"
