@@ -5,9 +5,9 @@ import { GoArrowUpRight } from "react-icons/go";
 export const Hero = () => {
   const { title, subTitle, src } = HeroContent();
   return (
-    <div className="relative flex min-h-[70vh] w-[100%] justify-center md:bg-background">
-      <div className="flex justify-center px-8 py-2 text-white">
-        <div className="absolute flex h-full w-full justify-center overflow-hidden rounded-lg">
+    <div className="relative flex min-h-[70vh] justify-center md:bg-background">
+      <div className="flex justify-center py-2 text-white lg:px-8">
+        <div className="rounded-0 absolute flex h-full w-svw justify-center overflow-hidden lg:w-full lg:rounded-lg">
           <video
             src={src}
             autoPlay
@@ -17,18 +17,18 @@ export const Hero = () => {
           />
         </div>
 
-        <div className="relative flex w-full flex-col justify-center gap-10 md:max-w-[700px]">
-          <h1 className="font-barlow text-h1 text-center leading-normal md:text-[2.8125rem] lg:text-[4rem]">
+        <div className="relative flex w-full flex-col justify-center gap-5 sm:gap-8 md:max-w-[700px] md:gap-10">
+          <h1 className="text-center font-barlow text-h1 md:text-[2.8125rem] lg:text-[4rem]">
             {title}
           </h1>
-          <p className="font-roboto-mono text-p16 text-center">{subTitle}</p>
-          <div className="flex flex-col justify-center gap-8 py-4 sm:flex-row">
-            <Button className="button-glass font-barlow gap-2 font-bold">
+          <p className="text-center font-roboto-mono text-p16">{subTitle}</p>
+          <div className="flex flex-col justify-center gap-4 py-4 sm:flex-row lg:gap-8">
+            <Button className="button-glass gap-2 font-barlow font-bold">
               Start Collecting <GoArrowUpRight size="23px" />
             </Button>
             <Button
               variant="ghostLink"
-              className="button-glass font-barlow gap-2 font-bold"
+              className="button-glass gap-2 font-barlow font-bold"
             >
               Create NFT <GoArrowUpRight size="23px" />
             </Button>
