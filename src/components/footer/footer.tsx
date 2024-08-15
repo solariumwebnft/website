@@ -12,13 +12,18 @@ export const Footer = () => {
             {footerData.map((section, index) => (
               <div
                 key={index}
-                className="min-w-[200px] flex-1 justify-center py-4"
+                className="text-p16 min-w-[200px] flex-1 justify-center py-4"
               >
-                <h2 className="mb-4 font-semibold">{section.title}</h2>
+                <h2 className="font-barlow mb-4 font-semibold">
+                  {section.title}
+                </h2>
                 {section.links.length > 0 && (
                   <ul className="space-y-2">
                     {section.links.map((link, linkIndex) => (
-                      <li className="text-gray-400" key={linkIndex}>
+                      <li
+                        className="font-roboto-mono text-p14 text-[#D6D6D6]"
+                        key={linkIndex}
+                      >
                         {link}
                       </li>
                     ))}
@@ -45,13 +50,15 @@ export const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="flex w-full max-w-[1110px] flex-col items-center px-5 pt-10 text-center text-gray-400 xl:px-0">
+        <div className="flex w-full max-w-[1110px] flex-col items-center px-5 pt-10 text-center xl:px-0">
           <hr className="w-full border-gray-700 pt-6" />
           <div className="flex w-full flex-col justify-between gap-4 md:flex-row">
             <div className="flex">
-              <p>© 2024 Solarium - Made By Factree</p>
+              <p className="font-roboto-mono text-p14 text-[#A3A3A3]">
+                © 2024 Solarium - Made By Factree
+              </p>
             </div>
-            <div className="flex gap-10">
+            <div className="font-roboto-mono text-p14 flex gap-10 text-[#A3A3A3]">
               <Link href="/privacy-policy">Privacy Policy</Link>
               <Link href="/terms-of-service">Terms of Service</Link>
             </div>
