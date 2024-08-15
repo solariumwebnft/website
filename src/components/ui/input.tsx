@@ -1,16 +1,37 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { SlArrowUp } from "react-icons/sl";
-import { SlArrowDown } from "react-icons/sl";
+import { SlArrowUp, SlArrowDown } from "react-icons/sl";
 
 export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {}
+  extends React.InputHTMLAttributes<HTMLInputElement> {
+  onValueChange?: (value: number) => void;
+}
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type = "number", ...props }, ref) => {
+  ({ className, type = "number", onValueChange, ...props }, ref) => {
     const localRef = React.useRef<HTMLInputElement>(null);
 
-    const inputRef = ref || localRef;
+    const inputRef = (ref as React.RefObject<HTMLInputElement>) || localRef;
+
+    const handleStepUp = () => {
+      if (inputRef.current) {
+        inputRef.current.stepUp();
+        if (onValueChange) {
+          onValueChange(Number(inputRef.current.value));
+        }
+      }
+    };
+
+    const handleStepDown = () => {
+      if (inputRef.current) {
+        if (Number(inputRef.current.value) > 0) {
+          inputRef.current.stepDown();
+          if (onValueChange) {
+            onValueChange(Number(inputRef.current.value));
+          }
+        }
+      }
+    };
 
     return (
       <div className="relative">
@@ -24,35 +45,18 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           ref={inputRef}
           {...props}
         />
-        <div className="border-1 absolute inset-y-0 right-0 flex flex-col">
+        <div className="border-1 absolute inset-y-0 right-0 mt-0 flex flex-col">
           <button
             type="button"
             className="flex h-[25px] w-8 items-center justify-center rounded-tr-md text-background md:mt-8"
-            onClick={() => {
-              if (
-                inputRef &&
-                typeof inputRef !== "function" &&
-                inputRef?.current
-              ) {
-                inputRef.current.stepUp();
-              }
-            }}
+            onClick={handleStepUp}
           >
             <SlArrowUp />
           </button>
           <button
             type="button"
             className="flex h-[25px] w-8 items-center justify-center rounded-br-md text-background"
-            onClick={() => {
-              if (
-                inputRef &&
-                typeof inputRef !== "function" &&
-                inputRef?.current &&
-                Number(inputRef.current.value) > 0
-              ) {
-                inputRef.current.stepDown();
-              }
-            }}
+            onClick={handleStepDown}
           >
             <SlArrowDown />
           </button>

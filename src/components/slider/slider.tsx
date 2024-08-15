@@ -67,10 +67,6 @@ export const Slider = () => {
         }}
         autoplay={{ delay: 5000 }}
         modules={[EffectCoverflow, Pagination, Navigation, EffectCards]}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
-        }}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
