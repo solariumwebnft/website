@@ -10,7 +10,5 @@ export const NFTCardContent = () => {
     "Leader in regulatory compliance and security certifications",
   ];
 
-  const button = "Start collection";
-
-  return { title, subTitle, checks, button };
+  return { title, subTitle, checks };
 };
