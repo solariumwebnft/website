@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import { FaWallet } from "react-icons/fa";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export const Navbar: React.FC = () => {
   const menuItems = [
-    { label: "Connect to wallet", icon: <FaWallet />, key: "wallet1" },
+    { label: "Wallet Connect", icon: <FaWallet />, key: "wallet1" },
   ];
 
   const [isLinksVisible, setIsLinksVisible] = useState<boolean>(false);
@@ -17,19 +18,16 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav className="relative top-0 z-[100] w-full bg-background">
-      <div className="mx-auto flex max-w-[100vw] items-center justify-between bg-background p-4">
-        <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
+      <div className="mx-auto flex max-w-[366px] items-center justify-between bg-background p-4 md:max-w-[864px] lg:max-w-[1110px]">
+        <Link href="/" passHref>
           <Image
-            src="/logo.svg"
-            className="h-8"
-            height={50}
-            width={50}
+            src="/logomarca.svg"
+            height={36}
+            width={228}
             alt="Solarium Logo"
+            className="cursor-pointer"
           />
-          <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
-            Solarium
-          </span>
-        </a>
+        </Link>
 
         <div className="md:hidden">
           <Button
@@ -63,7 +61,7 @@ export const Navbar: React.FC = () => {
           <ul className="height-100% flex gap-6 align-middle">
             {menuItems.map((item) => (
               <li key={item.key}>
-                <Button className="button-glass z-[101] max-w-[44px] justify-between p-2 px-4 text-white transition-colors duration-300">
+                <Button className="button-glass z-[101] max-w-[44px] justify-center gap-3 p-2 px-4 font-barlow text-p14bold font-bold text-white transition-colors duration-300">
                   {item.label} {item.icon}
                 </Button>
               </li>
@@ -84,7 +82,7 @@ export const Navbar: React.FC = () => {
                   display: "flex",
                   minWidth: "100%",
                 }}
-                className="button-glass z-[101] max-w-[44px] justify-center gap-2 p-2 px-4 text-white transition-colors duration-300"
+                className="button-glass z-[101] max-w-[44px] justify-center gap-2 p-2 px-4 font-barlow text-p14bold font-bold text-white transition-colors duration-300"
               >
                 {item.label} {item.icon}
               </Button>
