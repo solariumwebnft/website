@@ -6,9 +6,9 @@ export const Footer = () => {
   return (
     <footer className="w-full bg-background pb-4 text-white">
       <div className="flex flex-col items-center">
-        <div className="flex flex-col justify-center md:flex-row">
+        <div className="flex max-w-[1030px] flex-col justify-center md:flex-row">
           <FooterLogo />
-          <div className="flex max-w-[1110px] flex-wrap justify-center gap-6 pl-8 md:pl-0">
+          <div className="flex flex-wrap justify-center gap-6 pl-8 md:pl-0">
             {footerData.map((section, index) => (
               <div
                 key={index}
@@ -50,7 +50,7 @@ export const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="flex w-full max-w-[1110px] flex-col items-center px-5 pt-10 text-center xl:px-0">
+        <div className="flex w-full max-w-[1030px] flex-col items-center px-7 pt-10 text-center xl:px-0">
           <hr className="w-full border-gray-700 pt-6" />
           <div className="flex w-full flex-col justify-between gap-4 md:flex-row">
             <div className="flex">
