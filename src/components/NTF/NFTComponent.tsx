@@ -28,7 +28,7 @@ export function NFTComponent() {
   };
 
   return (
-    <main className="my-[6.4rem] mb-[10rem] flex w-full flex-col-reverse justify-center gap-8 px-8 md:flex-row lg:gap-40">
+    <main className="mt-[112px] flex w-full flex-col-reverse justify-center gap-8 px-8 md:flex-row lg:gap-40">
       <section className="flex flex-col justify-center md:max-w-[700px]">
         <div className="space-y-6 text-white">
           <h1 className="font-barlow text-h2 md:text-[2.1875rem] lg:text-[3.375rem]">

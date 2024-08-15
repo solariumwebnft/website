@@ -54,7 +54,7 @@ export const StickyScroll = ({
 
   return (
     <motion.div
-      className="flex h-[45rem] justify-center rounded-md pt-16 md:h-[50rem] md:pt-28 lg:justify-start lg:pr-[15rem]"
+      className="flex h-[45rem] justify-center rounded-md pt-[136px] md:h-[50rem] lg:justify-start lg:pr-[15rem]"
       ref={ref}
     >
       <div
