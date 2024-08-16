@@ -12,7 +12,7 @@ export function NFTComponent() {
   //substitua a string pela response com a session do usuario
   const session = "session.uid";
 
-  const buttonData = session ? "Create NFT" : "Connect Wallet";
+  const buttonData = session ? "Mint NFT" : "Connect Wallet";
 
   const { checks, subTitle, title } = NFTCardContent();
 
@@ -39,7 +39,7 @@ export function NFTComponent() {
             {checks.map((check) => (
               <p
                 key={check}
-                className="font-barlow text-p16 flex items-center gap-2"
+                className="flex items-center gap-2 font-barlow text-p16"
               >
                 <div className="text-primary">
                   <FaCheck />
@@ -50,7 +50,7 @@ export function NFTComponent() {
           </div>
         </div>
         <div className="gap-4 md:flex">
-          <Button className="font-barlow button-glass mt-8 w-full font-bold md:max-w-fit">
+          <Button className="button-glass mt-8 w-full font-barlow font-bold md:max-w-fit">
             {buttonData}
           </Button>
           <Input
