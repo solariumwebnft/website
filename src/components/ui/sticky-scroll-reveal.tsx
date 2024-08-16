@@ -20,12 +20,14 @@ export const StickyScroll = ({
   const [activeCard, setActiveCard] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
   const ref = useRef<any>(null);
 
   const checkDevice = () => {
     const width = window.innerWidth;
     setIsMobile(width <= 768);
     setIsTablet(width > 768 && width <= 1025);
+    setIsDesktop(width > 1325);
   };
 
   const initialPositionsDesktop = [
@@ -66,7 +68,7 @@ export const StickyScroll = ({
 
   return (
     <motion.div
-      className="flex h-[45rem] justify-center rounded-md pt-[40px] md:h-[50rem] lg:justify-start lg:pt-[136px]"
+      className="flex h-[45rem] justify-center rounded-md pt-[40px] md:h-[50rem] lg:justify-start lg:pt-[100px]"
       ref={ref}
     >
       <div
@@ -157,8 +159,6 @@ export const StickyScroll = ({
               >
                 <Image
                   alt={`Button ${index + 1}`}
-                  // width={isMobile ? 50 : 70}
-                  // height={isMobile ? 50 : 70}
                   fill
                   src={buttonImages[index]}
                   className="rounded-full"
@@ -166,14 +166,19 @@ export const StickyScroll = ({
               </motion.button>
               {isActive && (
                 <div
-                  className="absolute max-w-[200px]"
+                  className="relative max-w-[200px]"
                   style={{
-                    top: -18,
-                    left: 100,
+                    top: -90,
+                    left: 75,
                     width: isMobile ? "80px" : "300px",
                   }}
                 >
-                  <div className="w-[250px] max-w-max">
+                  <div
+                    className="w-[250px] max-w-max"
+                    style={{
+                      width: isDesktop ? "350px" : "250px",
+                    }}
+                  >
                     <div className="pb-2 font-barlow text-h5 md:w-[200px] md:text-p14 lg:w-[250px] lg:text-p16">
                       {item.title}
                     </div>

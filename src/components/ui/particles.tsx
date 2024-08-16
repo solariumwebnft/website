@@ -72,7 +72,7 @@ export const ParticlesCore = (props: ParticlesProps) => {
               },
               modes: {
                 push: {
-                  quantity: 3,
+                  quantity: 0.3,
                 },
                 connect: {
                   distance: 500,

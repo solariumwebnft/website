@@ -17,7 +17,6 @@ import image6 from "../../../assets/images/image5.png";
 import image7 from "../../../assets/images/image6.png";
 import image8 from "../../../assets/images/image7.png";
 import image9 from "../../../assets/images/image8.png";
-import image0 from "../../../assets/images/image9.png";
 import image11 from "../../../assets/images/image0.png";
 import image12 from "../../../assets/images/image11.png";
 import image13 from "../../../assets/images/image12.png";
@@ -34,7 +33,6 @@ const images = [
   image7,
   image8,
   image9,
-  image0,
   image11,
   image12,
   image13,
@@ -63,7 +61,7 @@ export const GridLayoutMedia = () => {
 
   return (
     <div className="z-50 flex w-full flex-col items-center justify-center p-4 px-8 pb-0 pt-20">
-      <h1 className="font-barlow text-h3 pb-[64px] text-center text-secondary md:text-start md:text-[1.875rem] lg:text-[2.8125rem]">
+      <h1 className="pb-[64px] text-center font-barlow text-h3 text-secondary md:text-start md:text-[1.875rem] lg:text-[2.8125rem]">
         Top Collections in Week
       </h1>
       <div className="relative flex h-[calc(100vw*9/16)] w-full max-w-[1030px] items-center justify-center overflow-hidden rounded-lg text-white md:h-[579.38px]">

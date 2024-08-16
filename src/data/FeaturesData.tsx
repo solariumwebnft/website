@@ -17,7 +17,7 @@ export const FeaturesData = () => {
       ),
       description: (
         <motion.div
-          className="py-3 text-sm"
+          className="py-1 text-sm"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -42,7 +42,7 @@ export const FeaturesData = () => {
       ),
       description: (
         <motion.div
-          className="py-3 text-sm"
+          className="py-1 text-sm"
           initial={{ opacity: 0, x: 70 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -66,7 +66,7 @@ export const FeaturesData = () => {
       ),
       description: (
         <motion.div
-          className="py-3 text-sm"
+          className="py-1 text-sm"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}

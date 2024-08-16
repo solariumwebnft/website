@@ -6,7 +6,7 @@ export const Stepbystep = () => {
   return (
     <div className="relative -bottom-[35%] -top-[60%]">
       <div
-        className="absolute inset-0 -bottom-[10%] -top-[25%] z-[10] hidden opacity-10 md:block"
+        className="absolute inset-0 -bottom-[10%] -top-[25%] z-[10] hidden opacity-5 md:block"
         style={{
           background: `
           url('/backgroundStep.svg') center/cover no-repeat`,

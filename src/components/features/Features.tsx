@@ -13,7 +13,7 @@ const Features = () => {
         {title}
       </div>
       <div className="flex justify-center text-center font-barlow text-p16 md:px-40">
-        <p className="max-w-[469px] py-4">{subtitle}</p>
+        <p className="max-w-[730px] py-4">{subtitle}</p>
       </div>
       <motion.div ref={ref} className="xl:pl-32">
         <StickyScroll content={content} buttonImages={buttonImages} />
