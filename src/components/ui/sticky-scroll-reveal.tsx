@@ -25,7 +25,7 @@ export const StickyScroll = ({
   const checkDevice = () => {
     const width = window.innerWidth;
     setIsMobile(width <= 768);
-    setIsTablet(width > 768 && width <= 1023);
+    setIsTablet(width > 768 && width <= 1025);
   };
 
   const initialPositionsDesktop = [
@@ -66,7 +66,7 @@ export const StickyScroll = ({
 
   return (
     <motion.div
-      className="flex h-[45rem] justify-center rounded-md pt-[136px] md:h-[50rem] lg:justify-start lg:pr-[15rem]"
+      className="flex h-[45rem] justify-center rounded-md pt-[40px] md:h-[50rem] lg:justify-start lg:pt-[136px]"
       ref={ref}
     >
       <div
@@ -125,8 +125,8 @@ export const StickyScroll = ({
             <motion.div
               className="absolute"
               style={{
-                width: "80px",
-                height: "80px",
+                width: "60px",
+                height: "60px",
                 opacity: isActive ? 1 : 0.5,
                 transform: "translate(-50%, -50%)",
                 zIndex: 20,
@@ -144,8 +144,8 @@ export const StickyScroll = ({
                 className={`z-10 flex items-center justify-center rounded-full bg-primary p-0 text-white ${isActive ? "active-neon-button" : ""}`}
                 onClick={() => setIndex(index)}
                 style={{
-                  width: "80px",
-                  height: "80px",
+                  width: "60px",
+                  height: "60px",
                   border: isActive ? "2px solid white" : "none",
                 }}
                 whileHover={{ scale: 1.1 }}
@@ -157,29 +157,30 @@ export const StickyScroll = ({
               >
                 <Image
                   alt={`Button ${index + 1}`}
-                  width={isMobile ? 50 : 70}
-                  height={isMobile ? 50 : 70}
+                  // width={isMobile ? 50 : 70}
+                  // height={isMobile ? 50 : 70}
+                  fill
                   src={buttonImages[index]}
                   className="rounded-full"
                 />
               </motion.button>
               {isActive && (
                 <div
-                  className="absolute"
+                  className="absolute max-w-[200px]"
                   style={{
                     top: -18,
                     left: 100,
-                    width: isMobile ? "80px" : "200px",
+                    width: isMobile ? "80px" : "300px",
                   }}
                 >
-                  <div className="min-w-[200px] md:max-w-[200px] lg:w-[400px]">
-                    <div className="font-barlow text-h5 md:text-[1.25rem] lg:text-[1.75rem]">
+                  <div className="w-[250px] max-w-max">
+                    <div className="pb-2 font-barlow text-h5 md:w-[200px] md:text-p14 lg:w-[250px] lg:text-p16">
                       {item.title}
                     </div>
                     <motion.div
                       className="neon-glow"
                       initial={{ width: 0 }}
-                      animate={{ width: "100%" }}
+                      animate={{ width: "50%" }}
                       transition={{ duration: 1 }}
                     />
                     <p className="font-barlow text-p16">{item.description}</p>
