@@ -7,7 +7,7 @@ export const Hero = () => {
   return (
     <div className="relative flex min-h-[70vh] justify-center md:bg-background">
       <div className="flex justify-center py-2 text-white lg:px-8">
-        <div className="rounded-0 absolute flex h-full w-svw justify-center overflow-hidden lg:w-full lg:rounded-lg">
+        <div className="rounded-0 absolute flex h-full w-[100svw] justify-center overflow-hidden md:w-[98.1svw] lg:w-full lg:rounded-lg">
           <video
             src={src}
             autoPlay
