@@ -6,13 +6,15 @@ import CharacterScene from "../components/3Dmodels/CharacterScene";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 export const FeaturesData = () => {
-  const title = "What is Solarium?";
+  const title = "What is Solarium";
   const subtitle =
-    " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu metus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu metus";
+    "Embark on the 23rd-century era, where humanity, forced to abandon Earth, seeks refuge in space colonies. Solarium, a cluster of uncharted solar systems, offers a unique opportunity for adventure and wealth.";
 
   const content = [
     {
-      title: <TextGenerateEffect words={`PIKACHU`} activeCard={1} index={1} />,
+      title: (
+        <TextGenerateEffect words={`Trade Assets`} activeCard={1} index={1} />
+      ),
       description: (
         <motion.div
           className="py-3 text-sm"
@@ -20,7 +22,8 @@ export const FeaturesData = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          aqui veremos mtas informacoes sobre o pica
+          Trade resources, form strategic alliances, and influence the market
+          through your decisions.
         </motion.div>
       ),
       content: (
@@ -31,7 +34,11 @@ export const FeaturesData = () => {
     },
     {
       title: (
-        <TextGenerateEffect words={`BUMBAZAURU `} activeCard={0} index={0} />
+        <TextGenerateEffect
+          words={`Extract Resources`}
+          activeCard={0}
+          index={0}
+        />
       ),
       description: (
         <motion.div
@@ -50,7 +57,13 @@ export const FeaturesData = () => {
       ),
     },
     {
-      title: <TextGenerateEffect words={`COMEDIAH`} activeCard={2} index={2} />,
+      title: (
+        <TextGenerateEffect
+          words={`Discover new planets`}
+          activeCard={2}
+          index={2}
+        />
+      ),
       description: (
         <motion.div
           className="py-3 text-sm"
@@ -58,7 +71,8 @@ export const FeaturesData = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          aqui veremos mtas informacoes sobre o comedia
+          Resist challenging conditions as you unravel the mysteries of the
+          universe and encounter remnants of alien civilizations.
         </motion.div>
       ),
       content: (
