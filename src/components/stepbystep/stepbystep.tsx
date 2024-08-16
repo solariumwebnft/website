@@ -4,20 +4,20 @@ import ArrowIcon from "../../../assets/stepbystep/ArrowIcon";
 
 export const Stepbystep = () => {
   return (
-    <div className="relative -bottom-[25%] -top-[50%]">
+    <div className="relative -bottom-[35%] -top-[60%]">
       <div
-        className="absolute inset-0 -bottom-[25%] -top-[45%] z-[10] hidden md:block"
+        className="absolute inset-0 -bottom-[10%] -top-[25%] z-[10] hidden opacity-10 md:block"
         style={{
           background: `
-          url('/background1.svg') center/cover no-repeat`,
+          url('/backgroundStep.svg') center/cover no-repeat`,
           backgroundSize: "none md:cover",
           backgroundPosition: "center",
-          minHeight: "90vh",
+          minHeight: "97vh",
         }}
       />
-      <div className="absolute inset-0 -bottom-[25%] -top-[50%] z-[-10] bg-background"></div>
+      <div className="absolute inset-0 -bottom-[5%] -top-[15%] z-[-10] bg-background"></div>
       <div className="container relative z-10 max-w-[1110px] py-10 pb-[17rem] pt-[9rem]">
-        <div aria-label="title" className="pb-10">
+        <div aria-label="title" className="pb-14">
           <h1 className="text-center font-barlow text-h3 text-white md:text-[1.875rem] lg:text-[2.8125rem]">
             Step by step Create and Sell Your NFTs
           </h1>

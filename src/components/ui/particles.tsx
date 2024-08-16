@@ -62,7 +62,7 @@ export const ParticlesCore = (props: ParticlesProps) => {
             interactivity: {
               events: {
                 onClick: {
-                  enable: false,
+                  enable: true,
                   mode: "push",
                 },
                 onHover: {
@@ -72,10 +72,10 @@ export const ParticlesCore = (props: ParticlesProps) => {
               },
               modes: {
                 push: {
-                  quantity: 0.3,
+                  quantity: 3,
                 },
                 connect: {
-                  distance: 800,
+                  distance: 500,
                 },
                 repulse: {
                   distance: 100,
@@ -108,10 +108,10 @@ export const ParticlesCore = (props: ParticlesProps) => {
                 density: {
                   enable: true,
                 },
-                value: 100,
+                value: 230,
               },
               opacity: {
-                value: 0.15,
+                value: 0.1,
               },
               shape: {
                 type: "circle",
