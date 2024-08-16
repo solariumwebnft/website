@@ -1,13 +1,13 @@
 export const NFTCardContent = () => {
-  const title: string = "Create, Explore & Collect Digital Art NFTs";
+  const title: string = "The World’s Leading Cryptocurrency Platform";
 
   const subTitle: string =
-    " Buy and sell NFTs from the world’s top artists. More than 1,000 premium digital artworks are available to be yours!";
+    "Discover new planets and resist alien invasions to enhance the extraction of valuable resources.";
 
   const checks: string[] = [
-    "Trusted by more than 80M users world-wide",
-    "The industry’s most comprehensive insurance coverage and verified proof of reserves",
-    "Leader in regulatory compliance and security certifications",
+    "A decentralized blockchain that allows true ownership and appreciation of in-game assets",
+    "A complex strategic game that rewards tactical gameplay and ingenuity thinking",
+    "We uphold the highest stan dards of transparency in our operations and the game’s economy",
   ];
 
   return { title, subTitle, checks };
