@@ -88,7 +88,7 @@ export const Navbar: React.FC = () => {
               <li key={link.key} className="text-secondary">
                 <a
                   href={link.href}
-                  className="hover-underline text-white"
+                  className="hover-underline font-barlow text-white"
                   onClick={(e) => handleSmoothScroll(e, link.href)}
                 >
                   {link.label}
@@ -116,7 +116,7 @@ export const Navbar: React.FC = () => {
             <li key={link.key} className="flex justify-center text-secondary">
               <a
                 href={link.href}
-                className="hover-underline text-white"
+                className="hover-underline font-barlow text-white"
                 onClick={(e) => handleSmoothScroll(e, link.href)}
               >
                 {link.label}
