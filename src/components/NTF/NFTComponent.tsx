@@ -5,6 +5,7 @@ import { FaCheck } from "react-icons/fa";
 import { NFTCardContent } from "@/data/NFTCardContent";
 import NFTCard from "./NFTCard";
 import { Input } from "../ui/input";
+import { GoArrowUpRight } from "react-icons/go";
 
 export function NFTComponent() {
   const [inputValue, setInputValue] = useState<number>(1);
@@ -12,7 +13,7 @@ export function NFTComponent() {
   //substitua a string pela response com a session do usuario
   const session = "session.uid";
 
-  const buttonData = session ? "Mint NFT" : "Connect Wallet";
+  const buttonData = session ? "Start Collecting" : "Connect Wallet";
 
   const { checks, subTitle, title } = NFTCardContent();
 
@@ -50,8 +51,8 @@ export function NFTComponent() {
           </div>
         </div>
         <div className="gap-4 md:flex">
-          <Button className="button-glass mt-8 w-full font-barlow font-bold md:max-w-fit">
-            {buttonData}
+          <Button className="button-glass mt-8 w-full gap-2 font-barlow font-bold md:max-w-fit">
+            {buttonData} <GoArrowUpRight size="23px" />
           </Button>
           <Input
             className="mt-4 md:mt-8"

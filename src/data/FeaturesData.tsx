@@ -13,17 +13,22 @@ export const FeaturesData = () => {
   const content = [
     {
       title: (
-        <TextGenerateEffect words={`Trade Assets`} activeCard={1} index={1} />
+        <TextGenerateEffect
+          words={`Overcome Challenges`}
+          activeCard={1}
+          index={1}
+        />
       ),
       description: (
         <motion.div
-          className="py-1 text-sm"
+          className="py-1 text-p16"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          Trade resources, form strategic alliances, and influence the market
-          through your decisions.
+          Trade crypto assets, form strategic alliances, and influence the
+          market through your decisions all while participating in a
+          decentralized economy system.
         </motion.div>
       ),
       content: (
@@ -42,12 +47,13 @@ export const FeaturesData = () => {
       ),
       description: (
         <motion.div
-          className="py-1 text-sm"
+          className="py-1 text-p16"
           initial={{ opacity: 0, x: 70 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          aqui veremos mtas informacoes sobre o bumbazaru
+          Strengthen your defenses against alien threats and optimize your
+          operations to dominate the galactic economy.
         </motion.div>
       ),
       content: (
@@ -66,7 +72,7 @@ export const FeaturesData = () => {
       ),
       description: (
         <motion.div
-          className="py-1 text-sm"
+          className="py-1 text-p16"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}

@@ -3,7 +3,8 @@ import { Button } from "../ui/button";
 import { GoArrowUpRight } from "react-icons/go";
 
 export const Hero = () => {
-  const { title, subTitle, src } = HeroContent();
+  const { title, subTitle, src, primaryButton, secundaryButton } =
+    HeroContent();
   return (
     <div className="relative flex min-h-[85vh] justify-center md:bg-background">
       <div className="flex justify-center py-2 text-white lg:px-8">
@@ -24,13 +25,13 @@ export const Hero = () => {
           <p className="text-center font-roboto-mono text-p16">{subTitle}</p>
           <div className="flex flex-col justify-center gap-4 py-4 sm:flex-row lg:gap-8">
             <Button className="button-glass gap-2 font-barlow font-bold">
-              Start Collecting <GoArrowUpRight size="23px" />
+              {primaryButton} <GoArrowUpRight size="23px" />
             </Button>
             <Button
               variant="ghostLink"
               className="button-glass gap-2 font-barlow font-bold"
             >
-              Create NFT <GoArrowUpRight size="23px" />
+              {secundaryButton}
             </Button>
           </div>
         </div>
