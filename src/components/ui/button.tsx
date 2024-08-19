@@ -24,7 +24,7 @@ const buttonVariants = cva(
 
         link: "text-primary ",
         ghostLink:
-          "border text-white bg-transparent border-white min-h-[50px] min-w-[190px]",
+          "border text-white bg-transparent border-white min-h-[50px] min-w-[100%] md:min-w-[190px]",
       },
       size: {
         default: "h-10 px-4 py-2",

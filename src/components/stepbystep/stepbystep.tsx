@@ -4,7 +4,7 @@ import ArrowIcon from "../../../assets/stepbystep/ArrowIcon";
 
 export const Stepbystep = () => {
   return (
-    <div className="relative -bottom-[35%] -top-[60%]">
+    <div className="relative -bottom-[35%] -top-[60%]" id="step-by-step">
       <div
         className="absolute inset-0 -bottom-[10%] -top-[25%] z-[10] hidden opacity-5 md:block"
         style={{

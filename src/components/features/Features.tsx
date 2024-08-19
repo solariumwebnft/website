@@ -8,7 +8,10 @@ const Features = () => {
   const { content, buttonImages, title, subtitle } = FeaturesData();
 
   return (
-    <main className="h-full w-full justify-center px-12 pb-48 text-white lg:px-32">
+    <main
+      className="h-full w-full justify-center px-12 pb-48 text-white lg:px-32"
+      id="about-us"
+    >
       <div className="flex justify-center text-center font-barlow text-h3 md:text-[1.875rem] lg:text-[2.8125rem]">
         {title}
       </div>

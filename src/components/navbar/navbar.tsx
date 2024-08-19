@@ -10,10 +10,35 @@ export const Navbar: React.FC = () => {
     { label: "Wallet Connect", icon: <FaWallet />, key: "wallet1" },
   ];
 
+  const navLinks = [
+    { label: "Get Started", href: "#get-started", key: "get-started" },
+    { label: "About us", href: "#about-us", key: "about-us" },
+    { label: "Step by Step", href: "#step-by-step", key: "step-by-step" },
+    { label: "Media", href: "#media", key: "media" },
+  ];
+
   const [isLinksVisible, setIsLinksVisible] = useState<boolean>(false);
 
   const toggleLinks = () => {
     setIsLinksVisible(!isLinksVisible);
+  };
+
+  const handleSmoothScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    e.preventDefault();
+    const target = document.querySelector(href);
+    const offset = href === "#media" ? -30 : 70;
+    if (target) {
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -58,7 +83,18 @@ export const Navbar: React.FC = () => {
           className="hidden w-full bg-background md:block md:w-auto"
           id="navbar-default"
         >
-          <ul className="height-100% flex gap-6 align-middle">
+          <ul className="flex items-center gap-6 align-middle">
+            {navLinks.map((link) => (
+              <li key={link.key} className="text-secondary">
+                <a
+                  href={link.href}
+                  className="hover-underline text-white"
+                  onClick={(e) => handleSmoothScroll(e, link.href)}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
             {menuItems.map((item) => (
               <li key={item.key}>
                 <Button className="button-glass z-[101] max-w-[44px] justify-center gap-3 p-2 px-4 font-barlow text-p14bold font-bold text-white transition-colors duration-300">
@@ -71,9 +107,22 @@ export const Navbar: React.FC = () => {
       </div>
 
       <div
-        className={` ${isLinksVisible ? "" : "hidden"} z-30 transform transition-all duration-300 ease-in-out md:hidden`}
+        className={` ${
+          isLinksVisible ? "" : "hidden"
+        } z-30 transform transition-all duration-300 ease-in-out md:hidden`}
       >
         <ul className="absolute z-[50] flex w-full flex-col gap-4 bg-background p-6">
+          {navLinks.map((link) => (
+            <li key={link.key} className="flex justify-center text-secondary">
+              <a
+                href={link.href}
+                className="hover-underline text-white"
+                onClick={(e) => handleSmoothScroll(e, link.href)}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
           {menuItems.map((item) => (
             <li key={item.key} className="flex h-full">
               <Button

@@ -15,7 +15,10 @@ const NFTCard: React.FC<NFTCardProps> = ({ inputValue }) => {
   const multipliedInfo = info * inputValue;
 
   return (
-    <section className="relative h-full justify-center sm:flex">
+    <section
+      className="relative h-full justify-center sm:flex"
+      id="get-started"
+    >
       <GlareCard className="relative mx-auto flex flex-col items-center justify-center overflow-hidden rounded-lg bg-white shadow-lg">
         <Image
           src={image}
