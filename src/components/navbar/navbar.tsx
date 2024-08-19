@@ -4,6 +4,7 @@ import { FaWallet } from "react-icons/fa";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export const Navbar: React.FC = () => {
   const menuItems = [
@@ -42,8 +43,13 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="relative top-0 z-[100] w-full bg-background">
-      <div className="mx-auto flex max-w-[366px] items-center justify-between bg-background p-4 md:max-w-[864px] lg:max-w-[1110px]">
+    <motion.header
+      className="relative top-0 z-[100] w-full bg-background px-4"
+      initial={{ opacity: 0, x: 50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, delay: 0, staggerChildren: 0.5 }}
+    >
+      <nav className="mx-auto flex max-w-[366px] items-center justify-between bg-background p-4 md:max-w-[864px] lg:max-w-[1110px]">
         <Link href="/" passHref>
           <Image
             src="/logomarca.svg"
@@ -86,13 +92,13 @@ export const Navbar: React.FC = () => {
           <ul className="flex items-center gap-6 align-middle">
             {navLinks.map((link) => (
               <li key={link.key} className="text-secondary">
-                <a
+                <Link
                   href={link.href}
                   className="hover-underline font-barlow text-white"
                   onClick={(e) => handleSmoothScroll(e, link.href)}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
             {menuItems.map((item) => (
@@ -104,7 +110,7 @@ export const Navbar: React.FC = () => {
             ))}
           </ul>
         </div>
-      </div>
+      </nav>
 
       <div
         className={` ${
@@ -139,6 +145,6 @@ export const Navbar: React.FC = () => {
           ))}
         </ul>
       </div>
-    </nav>
+    </motion.header>
   );
 };
