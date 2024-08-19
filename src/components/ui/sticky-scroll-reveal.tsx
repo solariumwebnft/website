@@ -179,7 +179,7 @@ export const StickyScroll = ({
                       width: isDesktop ? "350px" : "250px",
                     }}
                   >
-                    <div className="pb-2 font-barlow text-h5 md:w-[200px] md:text-p14 lg:w-[250px] lg:text-p16">
+                    <div className="md:w-max-content pb-2 font-barlow">
                       {item.title}
                     </div>
                     <motion.div
@@ -188,7 +188,9 @@ export const StickyScroll = ({
                       animate={{ width: "30%" }}
                       transition={{ duration: 1 }}
                     />
-                    <p className="font-barlow text-p16">{item.description}</p>
+                    <p className="font-barlow text-[16px]">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               )}

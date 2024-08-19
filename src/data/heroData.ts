@@ -6,5 +6,9 @@ export const HeroContent = () => {
 
   const src: string = "/solarium-hero-video.mp4";
 
-  return { title, subTitle, src };
+  const primaryButton: string = "Start Collecting";
+
+  const secundaryButton: string = "Learn More";
+
+  return { title, subTitle, src, primaryButton, secundaryButton };
 };

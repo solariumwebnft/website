@@ -19,7 +19,7 @@ export const Stepbystep = () => {
       <div className="container relative z-10 max-w-[1110px] py-10 lg:pb-[17rem] lg:pt-[9rem]">
         <div aria-label="title" className="pb-14">
           <h1 className="text-center font-barlow text-h3 text-white md:text-[1.875rem] lg:text-[2.8125rem]">
-            Step by step Create and Sell Your NFTs
+            Step by step: Get Started Today
           </h1>
         </div>
 

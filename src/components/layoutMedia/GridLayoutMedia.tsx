@@ -62,7 +62,7 @@ export const GridLayoutMedia = () => {
   return (
     <div className="z-50 flex w-full flex-col items-center justify-center p-4 px-8 pb-0 pt-20">
       <h1 className="pb-[64px] text-center font-barlow text-h3 text-secondary md:text-start md:text-[1.875rem] lg:text-[2.8125rem]">
-        Top Collections in Week
+        Media
       </h1>
       <div className="relative flex h-[calc(100vw*9/16)] w-full max-w-[1030px] items-center justify-center overflow-hidden rounded-lg text-white md:h-[579.38px]">
         <Button

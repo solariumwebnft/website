@@ -1,6 +1,6 @@
 export const CallToActionData = () => {
-  const title = "Discover, create and sell your own NFT";
-  const primaryButton = "Explore now";
-  const secundaryButton = "Create Your First NFT";
+  const title = "Discover, Expand and Thrive on Solarium";
+  const primaryButton = "Connect Wallet";
+  const secundaryButton = "Get your first NFT";
   return { title, primaryButton, secundaryButton };
 };

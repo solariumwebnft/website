@@ -12,9 +12,9 @@ export const Footer = () => {
             {footerData.map((section, index) => (
               <div
                 key={index}
-                className="text-p16 min-w-[200px] flex-1 justify-center py-4"
+                className="min-w-[200px] flex-1 justify-center py-4 text-p16"
               >
-                <h2 className="font-barlow mb-4 font-semibold">
+                <h2 className="mb-4 font-barlow font-semibold">
                   {section.title}
                 </h2>
                 {section.links.length > 0 && (
@@ -58,8 +58,8 @@ export const Footer = () => {
                 © 2024 Solarium - Made By Factree
               </p>
             </div>
-            <div className="font-roboto-mono text-p14 flex gap-10 text-[#A3A3A3]">
-              <Link href="/privacy-policy">Privacy Policy</Link>
+            <div className="flex gap-10 font-roboto-mono text-p14 text-[#A3A3A3]">
+              <Link href="/disclaimer">Disclaimer</Link>
               <Link href="/terms-of-service">Terms of Service</Link>
             </div>
           </div>

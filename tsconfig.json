@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/api/sitemap"
+    "src/app/api/sitemap",
+    "src/data/TermsOfServicetsx"
   ],
   "exclude": ["node_modules"]
 }

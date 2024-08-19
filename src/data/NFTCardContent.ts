@@ -1,8 +1,8 @@
 export const NFTCardContent = () => {
-  const title: string = "The World’s Leading Cryptocurrency Platform";
+  const title: string = "Start your journey: Unlock Solarium’s World";
 
   const subTitle: string =
-    "Discover new planets and resist alien invasions to enhance the extraction of valuable resources.";
+    "Begin mining and uncover a world of possibilities by unlocking our exclusive founder's NFT on Vitra Studio’s specialized blockchain.";
 
   const checks: string[] = [
     "A decentralized blockchain that allows true ownership and appreciation of in-game assets",

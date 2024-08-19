@@ -9,27 +9,27 @@ export const steps = [
     number: "step 1",
     title: "Set Up Your Wallet",
     description:
-      "Fusce non dignissim velit, sit amet semper eros. Quisque orci est",
+      "Set up your digital wallet to store your crypto assets on Vitra Studios Network.",
   },
   {
     icon: BillIcon,
     number: "step 2",
-    title: "Create your collection",
+    title: "Collect Your Gateway NFT",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus",
+      "Acquire your exclusive NFT to gain access to the territory and start mining valuable resources.",
   },
   {
     icon: MoneybagIcon,
     number: "step 3",
-    title: "Add your NFTs",
+    title: "Enter Solarium’s World",
     description:
-      "Suspendisse porttitor id est non accumsan. Cras vel viverra velit",
+      "Download the game to begin your journey. Log into your wallet to access your territory.",
   },
   {
     icon: Marketdown,
     number: "step 4",
-    title: "Sell your NFTs",
+    title: "Upgrade and Sell",
     description:
-      "Maecenas non semper quam. Vivamus et arcu condimentum ipsum consectetur",
+      "Enhance your modules and trade crypto assets to increase your efficiency and reach new earnings.",
   },
 ];
