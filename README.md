@@ -1,8 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Solarium NFT Website
+
+![Solarium Logo](https://website-bice-five-12.vercel.app/logomarca.svg)
+
+Explore, Discover & Conquer Solarium
+An immersive and strategic NFT game that combines resource mining, space exploration and cryptocurrency trading.
 
 ## Getting Started
 
-First, run the development server:
+1. First, install the dependencies:
+
+```bash
+npm i
+# or
+yarn
+# or
+pnpm i
+# or
+bun i
+```
+
+2. Then run the development server:
 
 ```bash
 npm run dev
@@ -14,7 +31,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
