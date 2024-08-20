@@ -6,7 +6,6 @@ import { GridLayoutMedia } from "@/components/layoutMedia/GridLayoutMedia";
 
 import { NFTComponent } from "@/components/NTF/NFTComponent";
 
-import { SparklesCore } from "@/components/ui/sparkles";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -15,49 +14,12 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import dynamic from "next/dynamic";
 import { Hero } from "@/components/hero/hero";
 import { Navbar } from "@/components/navbar/navbar";
 import { Slider } from "@/components/slider/slider";
 import { Stepbystep } from "@/components/stepbystep/stepbystep";
-import Image from "next/image";
 import { LoadingLogo } from "@/components/loadingLogo";
 import { SparklesBackground } from "@/components/sparklesBackground";
-
-const Scene = dynamic(() => import("@/components/3Dmodels/Scene"), {
-  ssr: false,
-});
-/**
- *
- * @todo - [done] Fix nft card shaking while perspective effect.
- * @explain [done] We should reduce number of runs component run, and increase smoothness between one run to another.
- * @todo In Call to Action card we should find a way to limit of vetores rendered at the same time, this WILL cause crash!!
- * @todo In carousel component, when the images finish, despite the fact that the images are looped, the carousel stops pre-rendering.
- * @explain Lets try to find a better way to pre-render the images, we should understand better how 'loop' and end of carrousel is working in next.
- * @todo [done] in layoutMedia component fix the modafoka white board at the corners
- * @todo in LayoutMedia component we should find a better way to handle with selected content. (waiting for design)
- * @todo [done] When refresh or first load, add a loading screen with useTimeout to avoid flickering(possibly find a better way to handle with this please).
- * @todo fix opacity of svg bg image in features. The opacity should be partial, from bottom to center with no opacity.
- * @todo [done] When refresh or first load, add a loading screen with useTimeout to avoid flickering(possibly find a better way to handle with this please).
- * @todo [done] fix opacity of svg bg image in features. The opacity should be partial, from bottom to center with no opacity.
- * @todo ADD hover to svg image in features component
- * @todo [done] add correct theme
- * @todo [done] fix all site z-index.
- * @TODO [done] remove scroll of carrousell
- * @todo [done] fix features component height
- * @todo [done] fix the width of call to action component (PAY ATTENTION TO THE RESPONSIVE)
- * @todo [] add background to sessions
- * @todo SEO
- * @todo [done] icone da tab do navegador
- * @todo metadados
- * @todo [done] titulo do site
- * @todo descricao do site
- * @todo [done] site map
- * @todo [done] robots.txt
- * @todo open graph
- * @todo [done] privacy policy page
- * @todo [done] terms of service page
- */
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -73,14 +35,7 @@ export default function Home() {
         <LoadingLogo />
       ) : (
         <div className="max-w-full items-center">
-          <motion.div
-            className="px-4"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0, staggerChildren: 0.5 }}
-          >
-            <Navbar />
-          </motion.div>
+          <Navbar />
 
           <motion.div
             className="px-8"
