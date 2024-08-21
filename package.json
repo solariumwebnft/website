@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.25.2",
+    "@mdx-js/react": "^3.0.1",
     "@radix-ui/react-slot": "^1.1.0",
     "@react-three/drei": "^9.109.5",
     "@react-three/fiber": "^8.16.8",
@@ -19,6 +20,7 @@
     "@types/swiper": "^6.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "contentlayer": "^0.3.4",
     "embla-carousel-autoplay": "^8.1.7",
     "embla-carousel-react": "^8.1.7",
     "framer-motion": "^11.3.21",
@@ -26,6 +28,7 @@
     "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.5",
     "react": "^18",
+    "next-contentlayer": "^0.3.4",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
     "sitemap": "^8.0.0",

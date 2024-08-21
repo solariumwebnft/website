@@ -18,7 +18,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     }
   },
   "include": [
@@ -27,6 +28,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/api/sitemap",
+    ".contentlayer/**/*",
     "src/data/TermsOfServicetsx"
   ],
   "exclude": ["node_modules"]
