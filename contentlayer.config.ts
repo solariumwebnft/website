@@ -1,7 +1,7 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 
-const WhitePaper = defineDocumentType(() => ({
-  name: "WhitePaper",
+const Doc = defineDocumentType(() => ({
+  name: "Doc",
   filePathPattern: `**/*.mdx`,
   contentType: "mdx",
   fields: {
@@ -11,15 +11,15 @@ const WhitePaper = defineDocumentType(() => ({
     summary: { type: "string", required: true },
   },
   computedFields: {
-    url: {
+    slug: {
       type: "string",
-      resolve: (doc) => `/whitepaper/${doc._raw.flattenedPath}`,
+      resolve: (doc) => `/${doc._raw.flattenedPath}`,
     },
   },
 }));
 
 export default makeSource({
-  contentDirPath: "content",
-  documentTypes: [WhitePaper],
+  contentDirPath: "./content",
+  documentTypes: [Doc],
   disableImportAliasWarning: true,
 });
