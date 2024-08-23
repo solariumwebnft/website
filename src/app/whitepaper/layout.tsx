@@ -135,8 +135,8 @@ const WhitePaperIndex = ({ children }: PropsWithChildren) => {
   return (
     <div className="flex h-screen flex-col">
       {/* Common Header */}
-      <header className="flex w-full items-center justify-between bg-yellow-500 p-4">
-        <h1 className="text-lg font-bold">Document Title</h1>
+      <header className="flex w-full items-center justify-between bg-background p-4">
+        <h1 className="text-lg font-bold text-white">Document Title</h1>
         <input
           type="text"
           placeholder="Search documents..."
@@ -148,7 +148,7 @@ const WhitePaperIndex = ({ children }: PropsWithChildren) => {
 
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar */}
-        <nav className="w-64 overflow-y-auto bg-black text-white">
+        <nav className="w-64 overflow-y-auto bg-background text-white">
           <ul>
             {filteredSideNavConfig.map((section) => (
               <li key={section.title} className="p-4">

@@ -48,15 +48,13 @@ export default function WhitePaperPage({ params }: WhitePaperPageProps) {
 
   return (
     <article className="">
-      <h1 className="max-w-[70%] bg-orange-500 text-[30px] font-bold">
-        {doc.title}
-      </h1>
+      <h1 className="max-w-[70%] text-[30px] font-bold">{doc.title}</h1>
       <div className="flex">
-        <div className="prose min-w-[70%]">
-          <p className="bg-yellow-200">{doc.author}</p>
+        <div className="prose mr-8 min-w-[70%] max-w-[70%] bg-black">
+          <p>{doc.author}</p>
           <Component />
         </div>
-        <div className="min-w-[30%] bg-blue-500">overview</div>
+        <div className="min-w-[30%] max-w-[30%] bg-primary">overview</div>
       </div>
     </article>
   );
