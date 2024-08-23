@@ -47,10 +47,17 @@ export default function WhitePaperPage({ params }: WhitePaperPageProps) {
   const Component = useMDXComponent(doc.body.code);
 
   return (
-    <article className="bg-purple-500">
-      <h1>{doc.title}</h1>
-      <p>{doc.author}</p>
-      <Component />
+    <article className="">
+      <h1 className="max-w-[70%] bg-orange-500 text-[30px] font-bold">
+        {doc.title}
+      </h1>
+      <div className="flex">
+        <div className="prose min-w-[70%]">
+          <p className="bg-yellow-200">{doc.author}</p>
+          <Component />
+        </div>
+        <div className="min-w-[30%] bg-blue-500">overview</div>
+      </div>
     </article>
   );
 }

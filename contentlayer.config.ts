@@ -22,4 +22,5 @@ export default makeSource({
   contentDirPath: "./content",
   documentTypes: [Doc],
   disableImportAliasWarning: true,
+  mdx: {},
 });
