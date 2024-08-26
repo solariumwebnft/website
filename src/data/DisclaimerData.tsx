@@ -3,7 +3,7 @@ export const DisclaimerData = () => {
     <section className="flex justify-center">
       <div className="max-w-[1080px] space-y-5 text-left font-barlow text-p16">
         <p>
-          Please read this "Disclaimer" section carefully. We recommend that you
+          Please read this Disclaimer section carefully. We recommend that you
           consult your own legal, financial, tax or other professional advisors
           before engaging in any activity related to Solarium. Nor any service
           provider shall be liable for any type of direct or indirect damage or
