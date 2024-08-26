@@ -134,7 +134,6 @@ const WhitePaperIndex = ({ children }: PropsWithChildren) => {
 
   return (
     <div className="flex h-screen flex-col">
-      {/* Common Header */}
       <header className="flex w-full items-center justify-between bg-background p-4">
         <h1 className="text-lg font-bold text-white">Document Title</h1>
         <input
@@ -147,7 +146,6 @@ const WhitePaperIndex = ({ children }: PropsWithChildren) => {
       </header>
 
       <div className="flex flex-1 overflow-hidden">
-        {/* Sidebar */}
         <nav className="w-64 overflow-y-auto bg-background text-white">
           <ul>
             {filteredSideNavConfig.map((section) => (
@@ -213,7 +211,6 @@ const WhitePaperIndex = ({ children }: PropsWithChildren) => {
           </ul>
         </nav>
 
-        {/* Main Content */}
         <main className="flex-1 overflow-y-auto bg-white p-8">{children}</main>
       </div>
     </div>

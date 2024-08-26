@@ -50,7 +50,7 @@ export default function WhitePaperPage({ params }: WhitePaperPageProps) {
     <article className="">
       <h1 className="max-w-[70%] text-[30px] font-bold">{doc.title}</h1>
       <div className="flex">
-        <div className="prose mr-8 min-w-[70%] max-w-[70%] bg-black">
+        <div className="prose mr-8 min-w-[70%] max-w-[70%]">
           <p>{doc.author}</p>
           <Component />
         </div>
