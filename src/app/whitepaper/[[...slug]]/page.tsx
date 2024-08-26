@@ -51,11 +51,11 @@ const getDocFromParams = ({
 export default function WhitePaperPage({ params }: WhitePaperPageProps) {
   const doc = getDocFromParams({ params });
 
+  const Component = useMDXComponent(doc!.body.code);
+
   if (!doc) {
     return <div>Document not found</div>;
   }
-
-  const Component = useMDXComponent(doc.body.code);
 
   return (
     <article>
