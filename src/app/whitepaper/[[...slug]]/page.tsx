@@ -20,14 +20,25 @@ export async function generateMetadata({
   params: Params;
 }): Promise<Metadata> {
   const whitePaper = allDocs.find((wp) => params.slug.includes(wp.slug));
-  return { title: whitePaper?.title };
+  return { title: whitePaper?.title || "Default Title" };
 }
 
 interface WhitePaperPageProps {
   params: Params;
 }
 
-const getDocFromParams = ({ params }: WhitePaperPageProps) => {
+interface Document {
+  title: string;
+  author: string;
+  body: {
+    code: string;
+  };
+  slug: string;
+}
+
+const getDocFromParams = ({
+  params,
+}: WhitePaperPageProps): Document | undefined => {
   const slug = params.slug.join("/");
 
   const doc = allDocs.find((wp) => {
@@ -41,20 +52,20 @@ export default function WhitePaperPage({ params }: WhitePaperPageProps) {
   const doc = getDocFromParams({ params });
 
   if (!doc) {
-    return <div>doc not found</div>;
+    return <div>Document not found</div>;
   }
 
   const Component = useMDXComponent(doc.body.code);
 
   return (
-    <article className="">
+    <article>
       <h1 className="max-w-[70%] text-[30px] font-bold">{doc.title}</h1>
       <div className="flex">
         <div className="prose mr-8 min-w-[70%] max-w-[70%]">
           <p>{doc.author}</p>
           <Component />
         </div>
-        <div className="min-w-[30%] max-w-[30%] bg-primary">overview</div>
+        <div className="min-w-[30%] max-w-[30%] bg-primary">Overview</div>
       </div>
     </article>
   );
