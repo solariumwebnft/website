@@ -10,7 +10,6 @@ export async function generateStaticParams(): Promise<{ slug: string[] }[]> {
   const params = allDocs.map((doc) => ({
     slug: doc._raw.flattenedPath.split("/"),
   }));
-  console.log(params);
   return params;
 }
 
